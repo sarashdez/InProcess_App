@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+                android:id="@+id/bio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/bio_button_txt"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/contacto_button"/>
+        <Button
+                android:id="@+id/marcas_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marcas_button_txt"
+                android:layout_alignTop="@+id/bio_button"
+                android:layout_toEndOf="@+id/contacto_button"/>
+        <Button
+                android:id="@+id/servicios_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_below="@+id/bio_button"
+                android:layout_alignStart="@+id/bio_button"
+                android:text="@string/servicios_button_txt"/>
+        <Button
+                android:id="@+id/noticias_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/servicios_button"
+                android:layout_alignEnd="@+id/marcas_button"
+                android:text="@string/noticias_button_txt"/>
+
+        <Button
+                android:id="@+id/contacto_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contacto_button_txt"
+                android:layout_below="@+id/servicios_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="69dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

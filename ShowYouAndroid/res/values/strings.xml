@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Show You</string>
+
+    <string name="bio_button_txt">Bio</string>
+    <string name="marcas_button_txt">Marcas</string>
+    <string name="servicios_button_txt">Servicios</string>
+    <string name="noticias_button_txt">Noticias</string>
+    <string name="contacto_button_txt">Contacto</string>
+
+
+</resources>

@@ -11,7 +11,7 @@
 
 
         <activity
-                android:name=".screen.view.StartPageView"
+                android:name=".screen.startPage.portrait.PortraitStartpageView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +19,66 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".screen.startPage.landscape.LandscapeStartpageView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.bio.portrait.PortraitBioView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.bio.landscape.LandscapeBioView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.marcas.portrait.PortraitMarcasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.marcas.landscape.LandscapeMarcasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.servicios.portrait.PortraitServiciosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.servicios.landscape.LandscapeServiciosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.noticias.portrait.PortraitNoticiasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.noticias.landscape.LandscapeNoticiasView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.contacto.portrait.PortraitContactoView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.contacto.landscape.LandscapeContactoView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+
+
+
+
 
 
     </application>

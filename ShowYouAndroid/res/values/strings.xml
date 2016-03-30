@@ -8,5 +8,17 @@
     <string name="noticias_button_txt">Noticias</string>
     <string name="contacto_button_txt">Contacto</string>
 
+    <string name="marcas_title_txt">Marcas</string>
+
+    <string name="bio_title_txt">Bio</string>
+    <string name="bio_description_txt">Description goes here</string>
+
+    <string name="servicios_title_txt">Servicios</string>
+    <string name="servicios_description_txt">Description goes here!!</string>
+
+    <string name="noticias_title_txt">Noticias</string>
+
+    <string name="contacto_title_txt">Contacto</string>
+
 
 </resources>

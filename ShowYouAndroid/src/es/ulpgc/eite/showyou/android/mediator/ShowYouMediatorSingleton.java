@@ -9,4 +9,5 @@ public class ShowYouMediatorSingleton extends AndroidMediatorSingleton {
     public void createMediator() {
         setCustomConfig(new ShowYouMediatorConfig(this));
     }
+
 }

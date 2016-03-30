@@ -1,4 +1,4 @@
-package es.ulpgc.eite.showyou.android.screen.model;
+package es.ulpgc.eite.showyou.android.screen.startPage.model;
 
 
 import es.ulpgc.eite.framework.android.AndroidScreenModel;

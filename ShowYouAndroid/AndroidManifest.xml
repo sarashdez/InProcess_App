@@ -36,22 +36,22 @@
         </activity>
 
         <activity
-                android:name=".screen.marcas.portrait.PortraitMarcasView"
+                android:name=".screen.marcas.master.portrait.PortraitMarcasMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
-                android:name=".screen.marcas.landscape.LandscapeMarcasView"
+                android:name=".screen.marcas.master.landscape.LandscapeMarcasMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
-                android:name=".screen.servicios.portrait.PortraitServiciosView"
+                android:name=".screen.media.portrait.PortraitMediaView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
-                android:name=".screen.servicios.landscape.LandscapeServiciosView"
+                android:name=".screen.media.landscape.LandscapeMediaView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
@@ -66,14 +66,27 @@
         </activity>
 
         <activity
-                android:name=".screen.contacto.portrait.PortraitContactoView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
+            android:name=".screen.contacto.portrait.PortraitContactoView"
+            android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
                 android:name=".screen.contacto.landscape.LandscapeContactoView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
+
+        <activity
+                android:name=".screen.eventos.portrait.PortraitEventosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.eventos.landscape.LandscapeEventosView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+
+
 
 
 

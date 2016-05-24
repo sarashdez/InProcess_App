@@ -1,0 +1,23 @@
+[
+  {
+    "id_eventos":1,
+    "nombre":"Franito ProJunior",
+    "lugar":"Lanzarote, Islas Canarias",
+    "fecha":"2016",
+    "descripcion":"En In-Process nos sentimos muy orgullosos de ser la empresa co-organizadora de la tercera edici�n del Franito ProJunior. Queremos dar las gracias a todas las instituciones y empresas que hacen posible este proyecto as� como al staff de t�cnicos por el gran trabajo que llevan a cabo durante todo el a�o para llevar a buen puerto este gran evento."
+  },
+  {
+    "id_eventos":2,
+    "nombre":"Puntablanca Surf&Bodyboard",
+    "lugar":"Tenerife, Islas Canarias",
+    "fecha":"2015",
+    "descripcion":"En In-Process estamos muy contentos de ser Co-Organizadores del campeonato de Surf de PUNTA BLANCA por XVII a�o consecutivo."
+  },
+  {
+    "id_eventos":3,
+    "nombre":"Campeonato de surf La Marea",
+    "lugar":"Tenerife, Islas Canarias",
+    "fecha":"2014",
+    "descripcion":"In-Process es la empresa encarga de organizar el campeonato de Surf  LA MAREA SURFSCHOOL playa de Martianez 2014. "
+  }
+]

@@ -26,15 +26,23 @@ public class PortraitStartpagePresenter extends StartPagePresenter{
         setMarcasBtnClicked(true);
         debug("buttonClicked", "clicked", getMarcasBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_PORTRAIT);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_MASTER_PORTRAIT);
     }
 
     @Override
-    public void serviciosButtonClicked() {
-        setServiciosBtnClicked(true);
-        debug("buttonClicked", "clicked", getServiciosBtnClicked());
+    public void eventosButtonClicked() {
+        setEventosBtnClicked(true);
+        debug("buttonClicked", "clicked", getEventosBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.SERVICIOS_PORTRAIT);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_PORTRAIT);
+    }
+
+    @Override
+    public void mediaButtonClicked() {
+        setMediaBtnClicked(true);
+        debug("buttonClicked", "clicked", getMediaBtnClicked());
+
+        startNextScreenWithObserver(this, ShowYouMediatorCode.MEDIA_PORTRAIT);
     }
 
     @Override

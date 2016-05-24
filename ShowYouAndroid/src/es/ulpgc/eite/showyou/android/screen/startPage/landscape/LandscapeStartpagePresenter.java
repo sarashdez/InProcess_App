@@ -26,15 +26,23 @@ public class LandscapeStartpagePresenter extends StartPagePresenter {
         setMarcasBtnClicked(true);
         debug("buttonClicked", "clicked", getMarcasBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_LANDSCAPE);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_MASTER_LANDSCAPE);
     }
 
     @Override
-    public void serviciosButtonClicked() {
-        setServiciosBtnClicked(true);
-        debug("buttonClicked", "clicked", getServiciosBtnClicked());
+    public void mediaButtonClicked() {
+        setMediaBtnClicked(true);
+        debug("buttonClicked", "clicked", getMediaBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.SERVICIOS_LANDSCAPE);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.MEDIA_LANDSCAPE);
+    }
+
+    @Override
+    public void eventosButtonClicked() {
+        setEventosBtnClicked(true);
+        debug("buttonClicked", "clicked", getEventosBtnClicked());
+
+        startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_LANDSCAPE);
     }
 
     @Override

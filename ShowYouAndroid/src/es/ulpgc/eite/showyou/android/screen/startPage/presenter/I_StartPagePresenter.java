@@ -5,8 +5,8 @@ public interface I_StartPagePresenter {
 
     void marcasButtonClicked();
     void bioButtonClicked();
-    void serviciosButtonClicked();
     void noticiasButtonClicked();
-
+    void eventosButtonClicked();
+    void mediaButtonClicked();
     void contactoButtonClicked();
 }

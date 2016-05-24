@@ -99,20 +99,6 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     }
 
-
-    private Boolean _serviciosBtnClicked;
-    public Boolean getServiciosBtnClicked() {
-        return _serviciosBtnClicked;
-    }
-    public void setServiciosBtnClicked(Boolean btnClicked) {
-        _serviciosBtnClicked = btnClicked;
-    }
-
-    @Override
-    public void serviciosButtonClicked() {
-
-    }
-
     private Boolean _noticiasBtnClicked;
     public Boolean getNoticiasBtnClicked() {
         return _noticiasBtnClicked;
@@ -123,6 +109,31 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     @Override
     public void noticiasButtonClicked() {
+
+    }
+
+    private Boolean _eventosBtnClicked;
+    public Boolean getEventosBtnClicked() {
+        return _eventosBtnClicked;
+    }
+    public void setEventosBtnClicked(Boolean btnClicked) {
+        _eventosBtnClicked = btnClicked;
+    }
+
+    @Override
+    public void eventosButtonClicked() {
+
+    }
+
+    private Boolean _mediaBtnClicked;
+    public Boolean getMediaBtnClicked() {
+        return _mediaBtnClicked;
+    }
+    public void setMediaBtnClicked(Boolean btnClicked) {
+        _mediaBtnClicked = btnClicked;
+    }
+    @Override
+    public void mediaButtonClicked() {
 
     }
 

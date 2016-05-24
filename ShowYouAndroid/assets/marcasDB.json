@@ -1,0 +1,79 @@
+﻿[
+  {
+    "id_marcas":1,
+    "nombre":"SuperBrand",
+    "imagen":"db_superbrand",
+    "descripcion":"SuperBrand, fundada en 2008 por los surfistas Dion Agius, Clay Marco y Ry Craike, se centra en la progresion. Con raices firmemente colocadas en la cultuda del surf, SuperBrand crea piezas unicas que cumplen los deseos, necesidades, ideologia y vision de la juventud y mas alla. Hacen tablas de surf de calidad y ropa que es relevante tanto para el ambito del surf como de la moda. ",
+    "web":"http://www.superbranded.com/"
+  },
+  {
+    "id_marcas":2,
+    "nombre":"GoPro",
+    "imagen":"db_gopro",
+    "descripcion":"Es una compañia fundada en 2002 en San Mateo (California), que desarrolla, produce y vende camaras personales de alta definicion, empleadas en grabaciones y toma de fotografias de deportes extremos. Son camaras de accion, compactas, ligeras, resistentes, y que pueden colocarse en vehiculos, manillares, cascos, muñecas y otros soportes. Capturan fotografias y graban videos en alta definición a traves de un objetivo gran angular. Tambien pueden configurarse para funcionar de forma automatica con una minima intervención, o para ser controladas de forma remota.",
+    "web":"http://www.gopro.com/"
+  },
+  {
+    "id_marcas":3,
+    "nombre":"Rusty",
+    "logo":"db_rusty",
+    "descripcion":"---",
+    "web":"http://www.rusty.com/"
+  },
+  {
+    "id_marcas":4,
+    "nombre":"SeventyOne Percent",
+    "imagen":"db_seventyone",
+    "descripcion":"Es en la region francesa de Landes donde la historia de SeventyOne Percent comienza. Es resultado de la asociacion de tres amigos con tres experiencias diferentes y una pasion: el surf. La buena practica de cualquier deporte se reduce a tres etapas: preparacion, proteccion y recuperacion. Asi, tres jovenes empresarios se unieron y combinaron su actividad profesional a su pasion, naciendo SeventyOne Percent.",
+    "web":"http://www.seventyone-percent.com/"
+  },
+  {
+    "id_marcas":5,
+    "nombre":"Modom",
+    "imagen":"db_modom",
+    "descripcion":"Los productos Modom esta basados en las influencias de todos los miembros del equipo y son probados en las condiciones más extremas. Constantemente nos retamos para producir nuevos y únicos productos de calidad superior y un estilo por el que nos hemos dado a conocer. Es una marca impulsada por la pasion por el surf y pensamiento moderno. Una marca que reconoceras de una forma rapida en tu tienda de surf local por nuestra forma diferente de presentar el producto.",
+    "web":"http://www.modomsurf.com/"
+  },
+  {
+    "id_marcas":6,
+    "nombre":"BD",
+    "imagen":"db_bd",
+    "descripcion":"Cuando todos tus mejores recuerdos estan siempre asociados con el patin, cuando tienes que agradecer al patin todos los lugares y amigos que has conocido… Llega un momento en que sientes que tienes que devolver al skateboarding parte de lo que te ha dado, esa es la razon por la que BD fue creada.",
+    "web":"http://www.bdskateco.com/"
+  },
+  {
+    "id_marcas":7,
+    "nombre":"Nexo",
+    "imagen":"db_nexo",
+    "descripcion":"---",
+    "web":"http://www.nexosurfboards.com/"
+  },
+  {
+    "id_marcas":8,
+    "nombre":"Chilli",
+    "imagen":"db_chilli",
+    "descripcion":"---",
+    "web":"http://www.chillisurfboards.com/"
+  },
+  {
+    "id_marcas":9,
+    "nombre":"Catchsurf",
+    "imagen":"db_catchsurf",
+    "descripcion":"---",
+    "web":"http://www.catchsurf.com/"
+  },
+  {
+    "id_marcas":10,
+    "nombre":"Narval",
+    "imagen":"db_narval",
+    "descripcion":"Una marca joven y progresista nacida en la provincia española de Asturias, Narval está cambiando el panorama del surf. Añade una dosis muy necesaria de originalidad e innovacion en el mundo del diseño de trajes de neopreno. Narval emplea las recomendaciones de sus surfistas y una actitud diferente para crear una variada gama de trajes que son perfectos para aguas de todo el mundo.",
+    "web":"http://www.narvalwetsuits.com/"
+  },
+  {
+    "id_marcas":11,
+    "nombre":"HaydenShapes",
+    "imagen":"db_haydenshapes",
+    "descripcion":"En 1996, en las playas del norte de Sydney, con solo 15 años Hayden Cox dio forma a su primera serie de tablas de surf desde el patio trasero de su padre para él, amigos de la escuela y algunos surfistas locales. En la parte superior de cada tabla coloco un simbolo que formaba HS, que luego fue perfeccionado y definido como logo de Haydenshapes. Habia nacido una marca.",
+    "web":"http://www.haydenshapes.com/"
+  }
+]

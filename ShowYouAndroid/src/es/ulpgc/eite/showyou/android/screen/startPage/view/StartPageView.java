@@ -3,6 +3,7 @@ package es.ulpgc.eite.showyou.android.screen.startPage.view;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.startPage.presenter.I_StartPagePresenter;
@@ -26,7 +27,8 @@ public abstract class StartPageView extends AndroidScreenView implements I_Start
     public void setListener() {
         debug("setListener");
 
-        Button marcasBtn = (Button) findViewById(R.id.marcas_button);
+        debug("MarcasButtonSetListener");
+        ImageButton marcasBtn = (ImageButton) findViewById(R.id.marcas_button);
         marcasBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -35,7 +37,18 @@ public abstract class StartPageView extends AndroidScreenView implements I_Start
             }
         });
 
-        Button bioBtn = (Button) findViewById(R.id.bio_button);
+        debug("EventosButtonSetListener");
+        ImageButton eventosBtn = (ImageButton) findViewById(R.id.eventos_button);
+        eventosBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getStartPagePresenter().eventosButtonClicked();
+            }
+        });
+
+        debug("BioButtonSetListener");
+        ImageButton bioBtn = (ImageButton) findViewById(R.id.bio_button);
         bioBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -44,16 +57,18 @@ public abstract class StartPageView extends AndroidScreenView implements I_Start
             }
         });
 
-        Button serviciosBtn = (Button) findViewById(R.id.servicios_button);
-        serviciosBtn.setOnClickListener(new View.OnClickListener() {
+        debug("MediaButtonSetListener");
+        ImageButton mediaBtn = (ImageButton) findViewById(R.id.media_button);
+        mediaBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                getStartPagePresenter().serviciosButtonClicked();
+                getStartPagePresenter().mediaButtonClicked();
             }
         });
 
-        Button noticiasBtn = (Button) findViewById(R.id.noticias_button);
+        debug("NoticiasButtonSetListener");
+        ImageButton noticiasBtn = (ImageButton) findViewById(R.id.noticias_button);
         noticiasBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -62,7 +77,8 @@ public abstract class StartPageView extends AndroidScreenView implements I_Start
             }
         });
 
-        Button contactoBtn = (Button) findViewById(R.id.contacto_button);
+        debug("ContactoButtonSetListener");
+        ImageButton contactoBtn = (ImageButton) findViewById(R.id.contacto_button);
         contactoBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -2,23 +2,40 @@
 
     <string name="app_name">Show You</string>
 
-    <string name="bio_button_txt">Biooooooooooooooooooooooooooooo</string>
-    <string name="marcas_button_txt">Marcas</string>
-    <string name="servicios_button_txt">Servicios</string>
-    <string name="noticias_button_txt">Noticias</string>
-    <string name="contacto_button_txt">Contacto</string>
 
+    <!-- PRUEBAS -->
     <string name="marcas_title_txt">Marcas</string>
-
     <string name="bio_title_txt">Bio</string>
     <string name="bio_description_txt">Description goes here</string>
-
     <string name="servicios_title_txt">Servicios</string>
     <string name="servicios_description_txt">Description goes here!!</string>
-
     <string name="noticias_title_txt">Noticias</string>
-
     <string name="contacto_title_txt">Contacto</string>
 
+    <!-- BIO -->
+    <string name="bio_titulo">¿Quiénes somos?</string>
+    <string name="bio_texto">"Aunque al comenzar en 2012 In-Process era un nombre nuevo en el mercado, ya contábamos con mas de 20 años de experiencia en el sector del Surf, Skate, Windsurf y Outdoor.
+        In-Process era un nuevo proyecto que desarrollaba la comercialización, gestión, marketing y servicios en las Islas Canarias.
+        Gracias a un duro esfuerzo y constancia, en pocos años hemos trabajado y trabajamos desarrollando funciones comerciales, de marketing y logísticas para empresas y marcas nacionales e internacionales.
+        Nuestra especialidad son sectores del Surf, Skate, Windsurf, Kitesurf, electrónica y fotografía outdoor.
+        En In-Process podemos asesorar, desarrollar y poner en marcha casi cualquier proyecto que necesiten en las islas, sin que nuestros clientes tengan que contratar diferentes empresas o equipos de trabajo para ello.
+        En In-Process basamos nuestro trabajo en la cercanía y dedicación hacia nuestros clientes, somos una empresa pequeña pero con un gran corazón, profesionales, diferentes y pasionales en cada uno de nuestros proyectos y encargos."
+    </string>
+
+    <!-- CONTACTO -->
+    <string name="contacto_titulo">Contacto:</string>
+    <string name="nombre_contacto">Lorenzo Suárez Dorta</string>
+    <string name="puesto_contacto">Ventas y Marketing de In-Process</string>
+    <string name="correo_contacto">info@inprocess.es</string>
+    <string name="telefono_contacto">+34 690 951 675</string>
+    <string name="llamar_button_txt">Llamar</string>
+
+    <!-- MEDIA -->
+    <string name="intro_media">Puedes encontrarnos en las siguientes redes sociales: </string>
+    <string name="facebook_page">https://www.facebook.com/InProcessCompany/</string>
+    <string name="instagram_page">https://www.instagram.com/in_process/</string>
+
+    <!-- EVENTOS -->
+    <string name="eventos_titulo">Eventos:</string>
 
 </resources>

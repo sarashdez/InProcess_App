@@ -4,7 +4,7 @@ package es.ulpgc.eite.showyou.android.screen.startPage.portrait;
 import es.ulpgc.eite.showyou.android.mediator.ShowYouMediatorCode;
 import es.ulpgc.eite.showyou.android.screen.startPage.presenter.StartPagePresenter;
 
-public class PortraitStartpagePresenter extends StartPagePresenter{
+public class PortraitStartpagePresenter extends StartPagePresenter {
 
     @Override
     public void rotateScreen() {
@@ -34,7 +34,8 @@ public class PortraitStartpagePresenter extends StartPagePresenter{
         setEventosBtnClicked(true);
         debug("buttonClicked", "clicked", getEventosBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_PORTRAIT);
+        //startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_PORTRAIT);
+        startNextScreenWithFinish( ShowYouMediatorCode.EVENTOS_PORTRAIT, false);
     }
 
     @Override

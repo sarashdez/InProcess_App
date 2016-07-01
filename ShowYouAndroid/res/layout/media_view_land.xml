@@ -2,12 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent" android:background="#ffffff">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/bio_title"
+                android:src="@drawable/logo_landscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 
     <TextView
+            android:id="@+id/intro_media"
+            android:text="@string/intro_media"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Media"
-            android:id="@+id/textView3"/>
+            android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="8dp"/>
+    <ImageView
+            android:id="@+id/facebook_title"
+            android:src="@drawable/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"/>
+    <TextView
+            android:id="@+id/facebookPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/facebook_page"
+            android:layout_marginLeft="8dp" android:textStyle="italic" android:textSize="15dp"/>
+    <ImageView
+            android:id="@+id/instagram_title"
+            android:src="@drawable/instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" android:layout_marginLeft="8dp"/>
+    <TextView
+            android:id="@+id/instagramPage"
+            android:text="@string/instagram_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="8dp"
+            android:textStyle="italic" android:textSize="15dp"/>
+    <ImageButton
+            android:id="@+id/facebookButton"
+            android:src="@drawable/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    />
+
 </LinearLayout>

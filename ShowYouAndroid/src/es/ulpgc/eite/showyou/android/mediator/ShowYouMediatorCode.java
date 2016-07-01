@@ -29,6 +29,7 @@ public class ShowYouMediatorCode extends MediatorCode {
 
     public final static int EVENTOS_PORTRAIT = 914;
     public final static int EVENTOS_LANDSCAPE = 915;
+    public final static int EVENTOS_DETAIL_PORTRAIT = 916;
 
 
 }

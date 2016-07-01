@@ -1,10 +1,10 @@
 package es.ulpgc.eite.showyou.android.screen.eventos.landscape;
 
 import es.ulpgc.eite.showyou.android.mediator.ShowYouMediatorCode;
-import es.ulpgc.eite.showyou.android.screen.eventos.presenter.EventosPresenter;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.EventosPresenter;
 
 
-public class LandscapeEventosPresenter extends EventosPresenter {
+public class LandEventosMasterPresenter extends EventosPresenter {
 
     @Override
     public void rotateScreen() {

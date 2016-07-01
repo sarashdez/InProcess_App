@@ -2,89 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-    <!-- COPIADO Y PEGADO DEL PORTRAIT -->
+              android:layout_height="match_parent" android:background="#010101">
 
 
-       <LinearLayout android:orientation="horizontal"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content" >
+    <ImageView
+            android:id="@+id/startpage_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cabecera_land"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+    />
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="6dp" android:layout_marginRight="6dp" android:layout_marginBottom="6dp">
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageButton
+                    android:id="@+id/marcas_button"
+                    android:src="@drawable/marcas_button"
+                    android:adjustViewBounds="true"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="#010101"/>
+
+            <ImageButton
+                    android:id="@+id/eventos_button"
+                    android:src="@drawable/eventos_button"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="3dp" android:background="#010101"/>
+
+            <ImageButton
+                    android:id="@+id/bio_button"
+                    android:src="@drawable/bio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="6dp" android:background="#010101"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageButton
+                    android:id="@+id/media_button"
+                    android:src="@drawable/media_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="6dp" android:background="#010101"/>
+
+            <ImageButton
+                    android:id="@+id/noticias_button"
+                    android:src="@drawable/noticias_button"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="3dp" android:background="#010101"/>
+
+            <ImageButton
+                    android:id="@+id/contacto_button"
+                    android:src="@drawable/contacto_button"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="3dp" android:background="#010101"/>
+        </TableRow>
+    </TableLayout>
 
 
-        <ImageButton
-                android:id="@+id/marcas_button"
-                android:src="@drawable/marcas_button"
-                android:adjustViewBounds="true"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="3dp"
-                android:layout_marginLeft="6dp"/>
-
-        <ImageButton
-                android:id="@+id/eventos_button"
-                android:src="@drawable/eventos_button"
-                android:adjustViewBounds="true"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="6dp"
-                android:layout_marginLeft="3dp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout android:orientation="horizontal"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content" >
-
-
-        <ImageButton
-                android:id="@+id/media_button"
-                android:src="@drawable/media_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:layout_weight="1"
-                android:layout_marginRight="3dp"
-                android:layout_marginLeft="6dp"/>
-
-        <ImageButton
-                android:id="@+id/noticias_button"
-                android:src="@drawable/noticias_button"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="6dp"
-                android:layout_marginLeft="3dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout android:orientation="horizontal"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content" >
-
-
-        <ImageButton
-                android:id="@+id/bio_button"
-                android:src="@drawable/bio_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:layout_weight="1"
-                android:layout_marginRight="3dp"
-                android:layout_marginLeft="6dp"/>
-
-        <ImageButton
-                android:id="@+id/contacto_button"
-                android:src="@drawable/contacto_button"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="6dp"
-                android:layout_marginLeft="3dp"/>
-
-</LinearLayout> </LinearLayout>
+</LinearLayout>

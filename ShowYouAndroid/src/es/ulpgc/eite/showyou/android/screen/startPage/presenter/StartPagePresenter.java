@@ -49,7 +49,7 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
     }
 
 
-    //STATES
+    //ESTADOS
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
 

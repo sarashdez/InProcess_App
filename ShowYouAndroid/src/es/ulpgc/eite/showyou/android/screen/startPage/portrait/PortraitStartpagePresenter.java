@@ -50,7 +50,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
         setNoticiasBtnClicked(true);
         debug("buttonClicked", "clicked", getNoticiasBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_PORTRAIT);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_MASTER_PORTRAIT);
     }
 
     @Override

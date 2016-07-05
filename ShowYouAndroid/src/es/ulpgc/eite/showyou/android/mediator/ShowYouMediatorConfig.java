@@ -20,7 +20,7 @@ import es.ulpgc.eite.showyou.android.screen.eventos.landscape.LandEventosDetailP
 import es.ulpgc.eite.showyou.android.screen.eventos.landscape.LandEventosDetailView;
 import es.ulpgc.eite.showyou.android.screen.eventos.landscape.LandEventosMasterPresenter;
 import es.ulpgc.eite.showyou.android.screen.eventos.landscape.LandEventosMasterView;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.model.EventosModel;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.model.EventosMasterModel;
 import es.ulpgc.eite.showyou.android.screen.eventos.portrait.PortraitEventosDetailPresenter;
 import es.ulpgc.eite.showyou.android.screen.eventos.portrait.PortraitEventosDetailView;
 import es.ulpgc.eite.showyou.android.screen.eventos.portrait.PortraitEventosMasterPresenter;
@@ -35,11 +35,16 @@ import es.ulpgc.eite.showyou.android.screen.marcas.portrait.PortraitMarcasDetail
 import es.ulpgc.eite.showyou.android.screen.marcas.portrait.PortraitMarcasDetailView;
 import es.ulpgc.eite.showyou.android.screen.marcas.portrait.PortraitMarcasMasterPresenter;
 import es.ulpgc.eite.showyou.android.screen.marcas.portrait.PortraitMarcasMasterView;
-import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandscapeNoticiasPresenter;
-import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandscapeNoticiasView;
-import es.ulpgc.eite.showyou.android.screen.noticias.model.NoticiasModel;
-import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasPresenter;
-import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasView;
+import es.ulpgc.eite.showyou.android.screen.noticias.detail.model.NoticiasDetailModel;
+import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandNoticiasDetailPresenter;
+import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandNoticiasDetailView;
+import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandNoticiasMasterPresenter;
+import es.ulpgc.eite.showyou.android.screen.noticias.landscape.LandscapeNoticiasMasterView;
+import es.ulpgc.eite.showyou.android.screen.noticias.master.model.NoticiasMasterModel;
+import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasDetailPresenter;
+import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasDetailView;
+import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasMasterPresenter;
+import es.ulpgc.eite.showyou.android.screen.noticias.portrait.PortraitNoticiasMasterView;
 import es.ulpgc.eite.showyou.android.screen.media.landscape.LandscapeMediaPresenter;
 import es.ulpgc.eite.showyou.android.screen.media.landscape.LandscapeMediaView;
 import es.ulpgc.eite.showyou.android.screen.media.model.MediaModel;
@@ -89,14 +94,16 @@ public class ShowYouMediatorConfig extends MediatorConfig {
         getScreens().add(new MediatorScreen(LandscapeMediaView.class, LandscapeMediaPresenter.class, MediaModel.class));
 
         //SCREEN EVENTOS
-        getScreens().add(new MediatorScreen(PortraitEventosMasterView.class, PortraitEventosMasterPresenter.class, EventosModel.class, ShowYouDatabase.class));
-        getScreens().add(new MediatorScreen(LandEventosMasterView.class, LandEventosMasterPresenter.class, EventosModel.class, ShowYouDatabase.class));
+        getScreens().add(new MediatorScreen(PortraitEventosMasterView.class, PortraitEventosMasterPresenter.class, EventosMasterModel.class, ShowYouDatabase.class));
+        getScreens().add(new MediatorScreen(LandEventosMasterView.class, LandEventosMasterPresenter.class, EventosMasterModel.class, ShowYouDatabase.class));
         getScreens().add(new MediatorScreen(PortraitEventosDetailView.class, PortraitEventosDetailPresenter.class, EventosDetailModel.class, ShowYouDatabase.class));
         getScreens().add(new MediatorScreen(LandEventosDetailView.class, LandEventosDetailPresenter.class, EventosDetailModel.class, ShowYouDatabase.class));
 
         //SCREEN NOTICIAS
-        getScreens().add(new MediatorScreen(PortraitNoticiasView.class, PortraitNoticiasPresenter.class, NoticiasModel.class));
-        getScreens().add(new MediatorScreen(LandscapeNoticiasView.class, LandscapeNoticiasPresenter.class, NoticiasModel.class));
+        getScreens().add(new MediatorScreen(PortraitNoticiasMasterView.class, PortraitNoticiasMasterPresenter.class, NoticiasMasterModel.class, ShowYouDatabase.class));
+        getScreens().add(new MediatorScreen(LandscapeNoticiasMasterView.class, LandNoticiasMasterPresenter.class, NoticiasMasterModel.class, ShowYouDatabase.class));
+        getScreens().add(new MediatorScreen(PortraitNoticiasDetailView.class, PortraitNoticiasDetailPresenter.class, NoticiasDetailModel.class, ShowYouDatabase.class));
+        getScreens().add(new MediatorScreen(LandNoticiasDetailView.class, LandNoticiasDetailPresenter.class, NoticiasDetailModel.class, ShowYouDatabase.class));
 
         //SCREEN CONTACTO
         getScreens().add(new MediatorScreen(PortraitContactoView.class, PortraitContactoPresenter.class, ContactoModel.class));
@@ -118,8 +125,8 @@ public class ShowYouMediatorConfig extends MediatorConfig {
         getTransitions().add(new MediatorTransition(PortraitStartpageView.class, PortraitMediaView.class, ShowYouMediatorCode.MEDIA_PORTRAIT));
         getTransitions().add(new MediatorTransition(LandscapeStartpageView.class, LandscapeMediaView.class, ShowYouMediatorCode.MEDIA_LANDSCAPE));
 
-        getTransitions().add(new MediatorTransition(PortraitStartpageView.class, PortraitNoticiasView.class, ShowYouMediatorCode.NOTICIAS_PORTRAIT));
-        getTransitions().add(new MediatorTransition(LandscapeStartpageView.class, LandscapeNoticiasView.class, ShowYouMediatorCode.NOTICIAS_LANDSCAPE));
+        getTransitions().add(new MediatorTransition(PortraitStartpageView.class, PortraitNoticiasMasterView.class, ShowYouMediatorCode.NOTICIAS_MASTER_PORTRAIT));
+        getTransitions().add(new MediatorTransition(LandscapeStartpageView.class, LandscapeNoticiasMasterView.class, ShowYouMediatorCode.NOTICIAS_MASTER_LANDSCAPE));
 
         getTransitions().add(new MediatorTransition(PortraitStartpageView.class, PortraitContactoView.class, ShowYouMediatorCode.CONTACTO_PORTRAIT));
         getTransitions().add(new MediatorTransition(LandscapeStartpageView.class, LandscapeContactoView.class, ShowYouMediatorCode.CONTACTO_LANDSCAPE));
@@ -157,8 +164,14 @@ public class ShowYouMediatorConfig extends MediatorConfig {
         getTransitions().add(new MediatorTransition(LandEventosDetailView.class, PortraitEventosDetailView.class, ShowYouMediatorCode.EVENTOS_SELECT_PORTRAIT));
 
         //NOTICIAS
-        getTransitions().add(new MediatorTransition(PortraitNoticiasView.class, LandscapeNoticiasView.class, ShowYouMediatorCode.NOTICIAS_LANDSCAPE));
-        getTransitions().add(new MediatorTransition(LandscapeNoticiasView.class, PortraitNoticiasView.class, ShowYouMediatorCode.NOTICIAS_PORTRAIT));
+        getTransitions().add(new MediatorTransition(PortraitNoticiasMasterView.class, LandscapeNoticiasMasterView.class, ShowYouMediatorCode.NOTICIAS_MASTER_LANDSCAPE));
+        getTransitions().add(new MediatorTransition(LandscapeNoticiasMasterView.class, PortraitNoticiasMasterView.class, ShowYouMediatorCode.NOTICIAS_MASTER_PORTRAIT));
+
+        getTransitions().add(new MediatorTransition(PortraitNoticiasMasterView.class, PortraitNoticiasDetailView.class, ShowYouMediatorCode.NOTICIAS_SELECT_PORTRAIT));
+        getTransitions().add(new MediatorTransition(LandscapeNoticiasMasterView.class, LandNoticiasDetailView.class, ShowYouMediatorCode.NOTICIAS_SELECT_LANDSCAPE));
+
+        getTransitions().add(new MediatorTransition(PortraitNoticiasDetailView.class, LandNoticiasDetailView.class, ShowYouMediatorCode.MARCAS_SELECT_LANDSCAPE));
+        getTransitions().add(new MediatorTransition(LandNoticiasDetailView.class, PortraitNoticiasDetailView.class, ShowYouMediatorCode.MARCAS_SELECT_PORTRAIT));
 
         //CONTACTO
         getTransitions().add(new MediatorTransition(PortraitContactoView.class, LandscapeContactoView.class, ShowYouMediatorCode.CONTACTO_LANDSCAPE));

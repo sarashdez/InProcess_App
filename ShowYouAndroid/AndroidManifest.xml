@@ -72,12 +72,22 @@
 
         <!-- NOTICIAS -->
         <activity
-                android:name=".screen.noticias.portrait.PortraitNoticiasView"
+                android:name=".screen.noticias.portrait.PortraitNoticiasMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
-                android:name=".screen.noticias.landscape.LandscapeNoticiasView"
+                android:name=".screen.noticias.landscape.LandscapeNoticiasMasterView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.noticias.portrait.PortraitNoticiasDetailView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.noticias.landscape.LandNoticiasDetailView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 

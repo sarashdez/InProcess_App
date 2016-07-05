@@ -2,13 +2,13 @@ package es.ulpgc.eite.showyou.android.screen.eventos.portrait;
 
 
 import es.ulpgc.eite.showyou.android.mediator.ShowYouMediatorCode;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.model.I_EventosModel;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.EventosPresenter;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.model.I_EventosMasterModel;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.EventosMasterPresenter;
 
-public class PortraitEventosMasterPresenter extends EventosPresenter {
+public class PortraitEventosMasterPresenter extends EventosMasterPresenter {
 
-    private I_EventosModel getEventosModel(){
-        return (I_EventosModel) getScreenModel();
+    private I_EventosMasterModel getEventosModel(){
+        return (I_EventosMasterModel) getScreenModel();
     }
 
     @Override

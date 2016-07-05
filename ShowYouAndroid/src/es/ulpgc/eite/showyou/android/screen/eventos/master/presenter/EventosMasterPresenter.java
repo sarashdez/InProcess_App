@@ -5,17 +5,17 @@ import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenObserver;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.model.I_EventosModel;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.view.I_EventosView;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.model.I_EventosMasterModel;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.view.I_EventosMasterView;
 import es.ulpgc.eite.showyou.android.screen.eventos.state.EventosState;
 
-public abstract class EventosPresenter extends AndroidScreenPresenter implements I_EventosPresenter, I_ScreenObserver {
+public abstract class EventosMasterPresenter extends AndroidScreenPresenter implements I_EventosMasterPresenter, I_ScreenObserver {
 
-    private I_EventosView getEventosView(){
-        return (I_EventosView) getScreenView();
+    private I_EventosMasterView getEventosView(){
+        return (I_EventosMasterView) getScreenView();
     }
-    private I_EventosModel getEventosModel(){
-        return (I_EventosModel) getScreenModel();
+    private I_EventosMasterModel getEventosModel(){
+        return (I_EventosMasterModel) getScreenModel();
     }
 
     @Override
@@ -63,7 +63,6 @@ public abstract class EventosPresenter extends AndroidScreenPresenter implements
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
         debug("setScreenState", "code", code);
-
         if(state != null) {
             EventosState _state = (EventosState) state;
             getEventosModel().setPosition(_state.getPosition());

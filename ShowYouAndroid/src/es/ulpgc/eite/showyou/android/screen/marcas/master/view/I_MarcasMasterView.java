@@ -9,10 +9,7 @@ import java.util.List;
 public interface I_MarcasMasterView {
 
     void setLayout();
-
     void setMarcasScreen();
-
     void setMarcasCollection(List<? extends I_MarcasData> collection);
-
     void setListPosition(int position);
 }

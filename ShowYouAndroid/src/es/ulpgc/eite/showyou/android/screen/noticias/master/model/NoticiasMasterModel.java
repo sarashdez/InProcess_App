@@ -1,11 +1,10 @@
-package es.ulpgc.eite.showyou.android.screen.eventos.master.model;
+package es.ulpgc.eite.showyou.android.screen.noticias.master.model;
 
 
 import android.app.Application;
 import es.ulpgc.eite.framework.android.AndroidScreenModel;
-import es.ulpgc.eite.showyou.android.screen.database.eventos_db.EventosData;
-import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosData;
-import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosDatabase;
+import es.ulpgc.eite.showyou.android.screen.database.noticias_db.I_NoticiasDatabase;
+import es.ulpgc.eite.showyou.android.screen.database.noticias_db.NoticiasData;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,27 +13,27 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class EventosModel extends AndroidScreenModel implements I_EventosModel {
+public class NoticiasMasterModel extends AndroidScreenModel implements I_NoticiasMasterModel {
 
     private int position;
 
-    private I_EventosDatabase getDatabase() {
-        return (I_EventosDatabase) getScreenDatabase();
+    private I_NoticiasDatabase getDatabase() {
+        return (I_NoticiasDatabase) getScreenDatabase();
     }
 
     @Override
-    public List<EventosData> getCollection(){
-        if(getDatabase().getEventosDataList().size() == 0){
+    public List<NoticiasData> getCollection(){
+        if(getDatabase().getNoticiasDataList().size() == 0){
             fillDatabase();
         }
-        return getDatabase().getEventosDataList();
+        return getDatabase().getNoticiasDataList();
     }
 
-   private void fillDatabase() {
-        debug("fillDatabase Eventos");
+    private void fillDatabase() {
+        debug("fillDatabase Noticias");
 
-        if(getDatabase().getEventosDataList().size()==0){
-            mapperJsonToJava(loadJsonFromAsset("eventosDB.json"));
+        if(getDatabase().getNoticiasDataList().size()==0){
+            mapperJsonToJava(loadJsonFromAsset("noticiasDB.json"));
         }
 
     }
@@ -45,22 +44,20 @@ public class EventosModel extends AndroidScreenModel implements I_EventosModel {
 
             for(int i =0; i<jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                EventosData data = getJavaObject(jsonObject);
-                getDatabase().saveEventosData(data);
+                NoticiasData data = getJavaObject(jsonObject);
+                getDatabase().saveNoticiasData(data);
             }
         } catch (JSONException e) {
 
         }
     }
 
-    private EventosData getJavaObject(JSONObject jsonObject) throws JSONException {
-        int idEventos = Integer.parseInt(jsonObject.getString("id_eventos"));
+    private NoticiasData getJavaObject(JSONObject jsonObject) throws JSONException {
+        int idNoticias = Integer.parseInt(jsonObject.getString("id_noticia"));
         String nombre = jsonObject.getString("nombre");
-        String lugar = jsonObject.getString("lugar");
-        String fecha = jsonObject.getString("fecha");
         String descripcion = jsonObject.getString("descripcion");
 
-        return new EventosData(idEventos, nombre, lugar, fecha, descripcion);
+        return new NoticiasData(idNoticias, nombre, descripcion);
     }
 
 
@@ -95,12 +92,8 @@ public class EventosModel extends AndroidScreenModel implements I_EventosModel {
     }
 
     @Override
-    public EventosData getData() {
-        return getDatabase().getEventosDataList().get(getPosition());
+    public NoticiasData getData() {
+        return getDatabase().getNoticiasDataList().get(getPosition());
     }
 
 }
-
-
-
-

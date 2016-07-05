@@ -2,9 +2,9 @@ package es.ulpgc.eite.showyou.android.screen.eventos.landscape;
 
 
 import es.ulpgc.eite.showyou.android.R;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.view.EventosView;
+import es.ulpgc.eite.showyou.android.screen.eventos.master.view.EventosMasterView;
 
-public class LandEventosMasterView extends EventosView {
+public class LandEventosMasterView extends EventosMasterView {
 
     @Override
     public int getLayout() {

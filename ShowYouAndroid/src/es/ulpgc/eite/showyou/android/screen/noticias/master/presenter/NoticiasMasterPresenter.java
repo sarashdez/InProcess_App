@@ -1,28 +1,28 @@
-package es.ulpgc.eite.showyou.android.screen.marcas.master.presenter;
+package es.ulpgc.eite.showyou.android.screen.noticias.master.presenter;
 
 
 import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenObserver;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
-import es.ulpgc.eite.showyou.android.screen.marcas.master.model.I_MarcasMasterModel;
-import es.ulpgc.eite.showyou.android.screen.marcas.master.view.I_MarcasMasterView;
-import es.ulpgc.eite.showyou.android.screen.marcas.state.MarcasState;
+import es.ulpgc.eite.showyou.android.screen.noticias.master.model.I_NoticiasMasterModel;
+import es.ulpgc.eite.showyou.android.screen.noticias.master.view.I_NoticiasMasterView;
+import es.ulpgc.eite.showyou.android.screen.noticias.state.NoticiasState;
 
-public abstract class MarcasMasterPresenter extends AndroidScreenPresenter implements I_MarcasMasterPresenter, I_ScreenObserver {
+public abstract class NoticiasMasterPresenter extends AndroidScreenPresenter implements I_NoticiasMasterPresenter, I_ScreenObserver {
 
-    private I_MarcasMasterView getMarcasView(){
-        return (I_MarcasMasterView) getScreenView();
+    private I_NoticiasMasterView getNoticiasView(){
+        return (I_NoticiasMasterView) getScreenView();
     }
-    private I_MarcasMasterModel getMarcasModel(){
-        return (I_MarcasMasterModel) getScreenModel();
+    private I_NoticiasMasterModel getNoticiasModel(){
+        return (I_NoticiasMasterModel) getScreenModel();
     }
 
     @Override
     public void createScreen() {
         debug("createScreen");
 
-        getMarcasView().setMarcasScreen();
+        getNoticiasView().setNoticiasScreen();
     }
 
     @Override
@@ -32,10 +32,10 @@ public abstract class MarcasMasterPresenter extends AndroidScreenPresenter imple
 
     @Override
     public void resumeScreen() {
-        debug("resumeScreen_MarcasMaster");
+        debug("resumeScreen_NoticiasMaster");
 
-        getMarcasView().setMarcasCollection(getMarcasModel().getCollection());
-        getMarcasView().setListPosition(getMarcasModel().getPosition());
+        getNoticiasView().setNoticiasCollection(getNoticiasModel().getCollection());
+        getNoticiasView().setListPosition(getNoticiasModel().getPosition());
     }
 
     @Override
@@ -64,15 +64,15 @@ public abstract class MarcasMasterPresenter extends AndroidScreenPresenter imple
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
         debug("setScreenState", "code", code);
         if(state != null) {
-            MarcasState _state = (MarcasState) state;
-            getMarcasModel().setPosition(_state.getPosition());
+            NoticiasState _state = (NoticiasState) state;
+            getNoticiasModel().setPosition(_state.getPosition());
         }
     }
 
     @Override
     public I_ScreenState getScreenState() {
         debug("getScreenState");
-        MarcasState state = new MarcasState(getMarcasModel().getPosition());
+        NoticiasState state = new NoticiasState(getNoticiasModel().getPosition());
         return state;
     }
 
@@ -80,7 +80,7 @@ public abstract class MarcasMasterPresenter extends AndroidScreenPresenter imple
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
         debug("getNextState", "code", code);
 
-        MarcasState state = new MarcasState(getMarcasModel().getData());
+        NoticiasState state = new NoticiasState(getNoticiasModel().getData());
         debug("getNextState", "data_nombre", state.getData().getNombre());
         return state;
     }

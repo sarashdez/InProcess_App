@@ -18,8 +18,10 @@ public class ShowYouMediatorCode extends MediatorCode {
     public final static int MARCAS_SELECT_LANDSCAPE = 907;
 
 
-    public final static int NOTICIAS_PORTRAIT = 908;
-    public final static int NOTICIAS_LANDSCAPE = 909;
+    public final static int NOTICIAS_MASTER_PORTRAIT = 908;
+    public final static int NOTICIAS_MASTER_LANDSCAPE = 909;
+    public final static int NOTICIAS_SELECT_PORTRAIT = 918;
+    public final static int NOTICIAS_SELECT_LANDSCAPE = 919;
 
     public final static int MEDIA_PORTRAIT = 910;
     public final static int MEDIA_LANDSCAPE = 911;

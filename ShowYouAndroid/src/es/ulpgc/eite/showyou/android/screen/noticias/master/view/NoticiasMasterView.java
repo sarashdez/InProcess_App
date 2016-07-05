@@ -1,25 +1,28 @@
-package es.ulpgc.eite.showyou.android.screen.eventos.master.view;
+package es.ulpgc.eite.showyou.android.screen.noticias.master.view;
 
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
-import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosData;
-import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.I_EventosPresenter;
+import es.ulpgc.eite.showyou.android.screen.database.noticias_db.I_NoticiasData;
+import es.ulpgc.eite.showyou.android.screen.noticias.master.presenter.I_NoticiasMasterPresenter;
 
 import java.util.List;
 
-public abstract class EventosView extends AndroidScreenView implements I_EventosView {
+public abstract class NoticiasMasterView extends AndroidScreenView implements I_NoticiasMasterView {
 
     private ListView _list;
-    private EventosAdapter _adapter;
+    private NoticiasAdapter _adapter;
 
-    private I_EventosPresenter getEventosPresenter(){
-        return (I_EventosPresenter) getScreenPresenter();
+    private I_NoticiasMasterPresenter getNoticiasMasterPresenter(){
+        return (I_NoticiasMasterPresenter) getScreenPresenter();
     }
 
     public abstract int getLayout();
@@ -37,16 +40,16 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
         this._list = list;
     }
 
-    public EventosAdapter getAdapter() {
+    public NoticiasAdapter getAdapter() {
         return _adapter;
     }
 
-    public void setAdapter(EventosAdapter adapter) {
+    public void setAdapter(NoticiasAdapter adapter) {
         this._adapter = adapter;
     }
 
     public int getListView() {
-        return R.id.eventos_list;
+        return R.id.noticias_list;
     }
 
     private int getRowLayout(){
@@ -54,36 +57,36 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
     }
 
     @Override
-    public void setEventosScreen(){
+    public void setNoticiasScreen(){
         setLayout();
-        setEventosList();
-        setEventosAdapter();
-        setEventosListAdapter();
-        setEventosListListener();
+        setNoticiasList();
+        setNoticiasAdapter();
+        setNoticiasListAdapter();
+        setNoticiasListListener();
     }
 
 
-    private void setEventosList(){
-        debug("setEventosList");
+    private void setNoticiasList(){
+        debug("setNoticiasList");
 
         setList((ListView) findViewById(getListView()));
     }
 
-    private void setEventosAdapter(){
-        debug("setMasterAdapter");
+    private void setNoticiasAdapter(){
+        debug("setNoticiasAdapter");
 
-        setAdapter(new EventosAdapter(this, getRowLayout()));
+        setAdapter(new NoticiasAdapter(this, getRowLayout()));
     }
 
-    private void setEventosListAdapter(){
+    private void setNoticiasListAdapter(){
         debug("setMasterListAdapter");
 
         getList().setAdapter(getAdapter());
     }
 
-    private void setEventosListListener(){
+    private void setNoticiasListListener(){
 
-        debug("setEventosListListener");
+        debug("setNoticiasListListener");
 
         getList().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -91,14 +94,14 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
             public void onItemClick(
                     AdapterView<?> parent, View view, int position, long id) {
 
-                getEventosPresenter().setListPosition(position);
+                getNoticiasMasterPresenter().setListPosition(position);
             }
         });
     }
 
 
     @Override
-    public void setEventosCollection(List<? extends I_EventosData> collection){
+    public void setNoticiasCollection(List<? extends I_NoticiasData> collection){
         debug("setMasterCollection", "collection", collection);
 
         getAdapter().clear();
@@ -113,12 +116,12 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
         getList().setSelection(position);
     }
 
-    private class EventosAdapter extends ArrayAdapter<I_EventosData> {
+    private class NoticiasAdapter extends ArrayAdapter<I_NoticiasData> {
 
         private int _rowLayout;
-        private EventosView _listView;
+        private NoticiasMasterView _listView;
 
-        private EventosView _getListView() {
+        private NoticiasMasterView _getListView() {
             return _listView;
         }
 
@@ -126,7 +129,7 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
             return _rowLayout;
         }
 
-        public void _setListView(EventosView view) {
+        public void _setListView(NoticiasMasterView view) {
             _listView = view;
         }
 
@@ -134,7 +137,7 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
             _rowLayout = layout;
         }
 
-        public EventosAdapter(EventosView _view, int _layout) {
+        public NoticiasAdapter(NoticiasMasterView _view, int _layout) {
             super(_view, _layout);
 
             _setListView(_view);
@@ -150,7 +153,7 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
 
             rowView = inflater.inflate(_getRowLayout(), parent, false);
 
-            I_EventosData data = getItem(position);
+            I_NoticiasData data = getItem(position);
             TextView titleView = (TextView) rowView.findViewById(R.id.lbl_title);
             titleView.setText(data.getNombre());
 

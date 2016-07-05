@@ -50,7 +50,7 @@ public class LandscapeStartpagePresenter extends StartPagePresenter {
         setNoticiasBtnClicked(true);
         debug("buttonClicked", "clicked", getNoticiasBtnClicked());
 
-        startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_LANDSCAPE);
+        startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_MASTER_LANDSCAPE);
     }
 
     @Override

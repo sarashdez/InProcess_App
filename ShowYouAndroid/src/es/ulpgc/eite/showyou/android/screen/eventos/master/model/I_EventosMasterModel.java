@@ -6,7 +6,7 @@ import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosData;
 
 import java.util.List;
 
-public interface I_EventosModel {
+public interface I_EventosMasterModel {
 
     List<EventosData> getCollection();
     int getPosition();

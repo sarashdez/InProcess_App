@@ -44,4 +44,7 @@
     <!-- MARCAS -->
     <string name="marcas_titulo">Marcas:</string>
 
+    <!-- NOTICIAS -->
+    <string name="noticias_titulo">Noticias:</string>
+
 </resources>

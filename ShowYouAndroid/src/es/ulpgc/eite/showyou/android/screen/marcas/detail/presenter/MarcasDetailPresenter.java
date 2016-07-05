@@ -25,7 +25,6 @@ public class MarcasDetailPresenter extends AndroidScreenPresenter implements I_M
 
         getMarcasDetailView().setMarcasDetailScreen();
         getMarcasDetailModel().setData(new MarcasData());
-       // getMarcasDetailView().setListener();
     }
 
     @Override

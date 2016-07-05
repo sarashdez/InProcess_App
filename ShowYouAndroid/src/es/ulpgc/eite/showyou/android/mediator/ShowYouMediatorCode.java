@@ -14,8 +14,8 @@ public class ShowYouMediatorCode extends MediatorCode {
 
     public final static int MARCAS_MASTER_PORTRAIT = 904;
     public final static int MARCAS_MASTER_LANDSCAPE = 905;
-    public final static int MARCAS_DETAIL_PORTRAIT = 906;
-    public final static int MARCAS_DETAIL_LANDSCAPE = 907;
+    public final static int MARCAS_SELECT_PORTRAIT = 906;
+    public final static int MARCAS_SELECT_LANDSCAPE = 907;
 
 
     public final static int NOTICIAS_PORTRAIT = 908;
@@ -29,7 +29,8 @@ public class ShowYouMediatorCode extends MediatorCode {
 
     public final static int EVENTOS_PORTRAIT = 914;
     public final static int EVENTOS_LANDSCAPE = 915;
-    public final static int EVENTOS_DETAIL_PORTRAIT = 916;
+    public final static int EVENTOS_SELECT_PORTRAIT = 916;
+    public final static int EVENTOS_SELECT_LANDSCAPE = 917;
 
 
 }

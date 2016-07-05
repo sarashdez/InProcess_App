@@ -10,7 +10,7 @@
             android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:showDividers="none"
             android:background="#010101">
         <ImageView
-                android:id="@+id/bio_title"
+                android:id="@+id/eventos_title"
                 android:src="@drawable/logo_landscape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

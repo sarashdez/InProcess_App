@@ -17,7 +17,6 @@ import java.util.List;
 public class EventosModel extends AndroidScreenModel implements I_EventosModel {
 
     private int position;
-    private EventosData dataRef;
 
     private I_EventosDatabase getDatabase() {
         return (I_EventosDatabase) getScreenDatabase();
@@ -46,16 +45,12 @@ public class EventosModel extends AndroidScreenModel implements I_EventosModel {
 
             for(int i =0; i<jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                //debug("mapperJsonToJava", "jsonObject", jsonObject);
                 EventosData data = getJavaObject(jsonObject);
-                //debug("mapperJsonToJava", "data", data);
                 getDatabase().saveEventosData(data);
             }
         } catch (JSONException e) {
 
         }
-
-        //debug("mapperJsonToJava", "eventosDataList", getDatabase().getEventosDataList());
     }
 
     private EventosData getJavaObject(JSONObject jsonObject) throws JSONException {
@@ -89,8 +84,6 @@ public class EventosModel extends AndroidScreenModel implements I_EventosModel {
         }
     }
 
-    ///////////
-
     @Override
     public int getPosition() {
         return position;
@@ -102,18 +95,8 @@ public class EventosModel extends AndroidScreenModel implements I_EventosModel {
     }
 
     @Override
-    public EventosData getDataRef() {
-        return dataRef;
-    }
-
-    @Override
-    public void setDataRef(EventosData data) {
-        dataRef = data;
-    }
-
-    @Override
-    public I_EventosData getData() {
-       return getCollection().get(getPosition());
+    public EventosData getData() {
+        return getDatabase().getEventosDataList().get(getPosition());
     }
 
 }

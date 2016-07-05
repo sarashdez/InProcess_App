@@ -15,7 +15,6 @@ import java.util.List;
 
 public abstract class EventosView extends AndroidScreenView implements I_EventosView {
 
-
     private ListView _list;
     private EventosAdapter _adapter;
 
@@ -34,16 +33,16 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
         return _list;
     }
 
-    public void setList(ListView _list) {
-        this._list = _list;
+    public void setList(ListView list) {
+        this._list = list;
     }
 
     public EventosAdapter getAdapter() {
         return _adapter;
     }
 
-    public void setAdapter(EventosAdapter _adapter) {
-        this._adapter = _adapter;
+    public void setAdapter(EventosAdapter adapter) {
+        this._adapter = adapter;
     }
 
     public int getListView() {
@@ -113,10 +112,6 @@ public abstract class EventosView extends AndroidScreenView implements I_Eventos
 
         getList().setSelection(position);
     }
-
-
-
-
 
     private class EventosAdapter extends ArrayAdapter<I_EventosData> {
 

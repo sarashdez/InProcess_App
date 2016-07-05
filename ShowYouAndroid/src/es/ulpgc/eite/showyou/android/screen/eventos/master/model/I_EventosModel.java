@@ -8,17 +8,8 @@ import java.util.List;
 
 public interface I_EventosModel {
 
-    List<? extends I_EventosData> getCollection();
-
-    //void fillDatabase();
-
+    List<EventosData> getCollection();
     int getPosition();
-
     void setPosition(int pos);
-
-    EventosData getDataRef();
-
-    void setDataRef(EventosData data);
-
-    I_EventosData getData();
+    EventosData getData();
 }

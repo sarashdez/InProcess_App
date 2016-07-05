@@ -9,7 +9,5 @@ public interface I_EventosView {
     void setLayout();
     void setEventosScreen();
     void setEventosCollection(List<? extends I_EventosData> collection);
-
-
     void setListPosition(int position);
 }

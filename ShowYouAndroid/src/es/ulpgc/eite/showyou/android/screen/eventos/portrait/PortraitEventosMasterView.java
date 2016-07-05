@@ -10,6 +10,7 @@ public class PortraitEventosMasterView extends EventosView {
     @Override
     public int getLayout() {
         debug("getLayout");
+
         return R.layout.eventos_master_view;
     }
 

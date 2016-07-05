@@ -16,11 +16,6 @@ import java.util.List;
 
 public class MediaPresenter extends AndroidScreenPresenter implements I_MediaPresenter {
 
-
-//    private I_AndroidMediatorSingleton getPlatformMediator() {
-//        return (I_AndroidMediatorSingleton) getMediator();
-//    }
-
     private I_MediaView getMediaView(){
         return (I_MediaView) getScreenView();
     }
@@ -31,7 +26,6 @@ public class MediaPresenter extends AndroidScreenPresenter implements I_MediaPre
 
         getMediaView().setLayout();
         getMediaView().setListener();
-        //getPlatformMediator().getContext().startActivity();
     }
 
     @Override

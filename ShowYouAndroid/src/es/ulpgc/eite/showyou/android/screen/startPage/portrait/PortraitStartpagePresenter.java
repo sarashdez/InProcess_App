@@ -34,7 +34,6 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
         setEventosBtnClicked(true);
         debug("buttonClicked", "clicked", getEventosBtnClicked());
 
-        //startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_PORTRAIT);
         startNextScreenWithFinish( ShowYouMediatorCode.EVENTOS_PORTRAIT, false);
     }
 

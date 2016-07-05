@@ -29,7 +29,7 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     @Override
     public void resumeScreen() {
-        debug("resumeScreen");
+        debug("resumeScreenStartpage");
     }
 
     @Override

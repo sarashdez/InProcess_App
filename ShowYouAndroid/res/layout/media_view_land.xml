@@ -22,38 +22,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="8dp"/>
-    <ImageView
-            android:id="@+id/facebook_title"
-            android:src="@drawable/facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="5dp"/>
-    <TextView
-            android:id="@+id/facebookPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/facebook_page"
-            android:layout_marginLeft="8dp" android:textStyle="italic" android:textSize="15dp"/>
-    <ImageView
-            android:id="@+id/instagram_title"
-            android:src="@drawable/instagram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" android:layout_marginLeft="8dp"/>
-    <TextView
-            android:id="@+id/instagramPage"
-            android:text="@string/instagram_page"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="8dp"
-            android:textStyle="italic" android:textSize="15dp"/>
-    <ImageButton
-            android:id="@+id/facebookButton"
-            android:src="@drawable/facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-    />
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp" android:layout_marginTop="10dp">
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/facebookButton"
+                    android:src="@drawable/facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" android:layout_marginRight="25dp"/>
+            <ImageButton
+                    android:id="@+id/instagramButton"
+                    android:src="@drawable/instagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"/>
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>

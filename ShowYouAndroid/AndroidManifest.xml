@@ -3,7 +3,6 @@
 
     <uses-sdk android:minSdkVersion="16"
               android:targetSdkVersion="22" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 
     <application android:allowBackup="true" android:label="@string/app_name"
@@ -11,9 +10,11 @@
                  android:name=".mediator.ShowYouMediatorSingleton">
 
 
+        <!-- STARTPAGE -->
         <activity
                 android:name=".screen.startPage.portrait.PortraitStartpageView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +27,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- BIO -->
         <activity
                 android:name=".screen.bio.portrait.PortraitBioView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
@@ -36,16 +38,28 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- MARCAS -->
         <activity
-                android:name=".screen.marcas.master.portrait.PortraitMarcasMasterView"
+                android:name=".screen.marcas.portrait.PortraitMarcasMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
         <activity
-                android:name=".screen.marcas.master.landscape.LandscapeMarcasMasterView"
+                android:name=".screen.marcas.landscape.LandMarcasMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <activity
+                android:name=".screen.marcas.portrait.PortraitMarcasDetailView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.marcas.landscape.LandMarcasDetailView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <!-- MEDIA -->
         <activity
                 android:name=".screen.media.portrait.PortraitMediaView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
@@ -56,6 +70,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- NOTICIAS -->
         <activity
                 android:name=".screen.noticias.portrait.PortraitNoticiasView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
@@ -66,6 +81,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- CONTACTO -->
         <activity
             android:name=".screen.contacto.portrait.PortraitContactoView"
             android:configChanges="orientation|keyboardHidden|screenSize">
@@ -76,6 +92,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- EVENTOS -->
         <activity
                 android:name=".screen.eventos.portrait.PortraitEventosMasterView"
                 android:configChanges="orientation|keyboardHidden|screenSize">
@@ -87,20 +104,14 @@
         </activity>
 
         <activity
-                android:name=".screen.eventos.detail.view.EventosDetailView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
+            android:name=".screen.eventos.portrait.PortraitEventosDetailView"
+            android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
-
-
-
-
-
-
-
-
-
-
+        <activity
+                android:name=".screen.eventos.landscape.LandEventosDetailView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
 
     </application>
 

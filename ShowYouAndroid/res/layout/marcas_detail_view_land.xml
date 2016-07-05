@@ -2,12 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent" android:background="#ffffff">
 
-    <TextView
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/bio_title"
+                android:src="@drawable/logo_landscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="MARCAS DETAIL"
-            android:id="@+id/textView6"/>
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+        <ImageView
+                android:id="@+id/marcas_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center"/>
+    </LinearLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView3" android:layout_marginTop="5dp" android:layout_marginLeft="8dp"
+            android:layout_marginRight="3dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/marcas_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Descripcion"/>
+            <ImageButton
+                    android:id="@+id/web_button"
+                    android:src="@drawable/web_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

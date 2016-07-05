@@ -14,6 +14,7 @@ public abstract class MediaView extends AndroidScreenView implements I_MediaView
 
     public abstract int getLayout();
 
+
     @Override
     public void setLayout(){
         debug("setLayout");
@@ -35,8 +36,19 @@ public abstract class MediaView extends AndroidScreenView implements I_MediaView
             }
         });
 
+        debug("InstagramButtonSetListener");
+        ImageButton instagramBtn = (ImageButton) findViewById(R.id.instagramButton);
+        instagramBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                instagramButtonClicked();
+            }
+        });
+
     }
 
+    //FACEBOOK BUTTON
     private Boolean _facebookBtnClicked;
     public Boolean getFacebookBtnClicked() {
         return _facebookBtnClicked;
@@ -44,7 +56,6 @@ public abstract class MediaView extends AndroidScreenView implements I_MediaView
     public void setFacebookBtnClicked(Boolean btnClicked) {
         _facebookBtnClicked = btnClicked;
     }
-
 
     public void facebookButtonClicked() {
         setFacebookBtnClicked(true);
@@ -54,19 +65,32 @@ public abstract class MediaView extends AndroidScreenView implements I_MediaView
         String facebookPage = "InProcessCompany";
         final String urlFb = "https://www.facebook.com/"+ facebookPage;
 
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(urlFb));
+        Intent intentFacebook = new Intent(Intent.ACTION_VIEW);
+        intentFacebook.setData(Uri.parse(urlFb));
 
-        /*
-        final PackageManager packageManager = getPackageManager();
-        List<ResolveInfo> list =
-                packageManager.queryIntentActivities(intent,
-                        PackageManager.MATCH_DEFAULT_ONLY);
-        if (list.size() == 0) {*/
-        final String urlBrowser = "https://www.facebook.com/pages/"+facebookPage;
-        intent.setData(Uri.parse(urlBrowser));
+        startActivity(intentFacebook);
+    }
 
-        startActivity(intent);
+    //INSTAGRAM BUTTON
+    private Boolean _instagramBtnClicked;
+    public Boolean getInstagramBtnClicked() {
+        return _instagramBtnClicked;
+    }
+    public void setInstagramBtnClicked(Boolean btnClicked) {
+        _instagramBtnClicked = btnClicked;
+    }
+
+    public void instagramButtonClicked() {
+        setInstagramBtnClicked(true);
+
+        debug("instagramButtonClicked", "clicked", getInstagramBtnClicked());
+
+        final String urlInstagram = "https://www.instagram.com/in_process/";
+
+        Intent intentInstagram = new Intent(Intent.ACTION_VIEW);
+        intentInstagram.setData(Uri.parse(urlInstagram));
+
+        startActivity(intentInstagram);
     }
 
 

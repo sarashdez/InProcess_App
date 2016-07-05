@@ -21,6 +21,7 @@ public class ContactoPresenter extends AndroidScreenPresenter implements I_Conta
         debug("createScreen");
 
         getContactoView().setLayout();
+        getContactoView().setListener();
 
     }
 

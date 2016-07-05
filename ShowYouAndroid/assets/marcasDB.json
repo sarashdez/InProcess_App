@@ -16,8 +16,8 @@
   {
     "id_marcas":3,
     "nombre":"Rusty",
-    "logo":"db_rusty",
-    "descripcion":"---",
+    "imagen":"db_rusty",
+    "descripcion":"Descripción disponible próximamente",
     "web":"http://www.rusty.com/"
   },
   {
@@ -45,21 +45,21 @@
     "id_marcas":7,
     "nombre":"Nexo",
     "imagen":"db_nexo",
-    "descripcion":"---",
+    "descripcion":"Descripción disponible próximamente.",
     "web":"http://www.nexosurfboards.com/"
   },
   {
     "id_marcas":8,
     "nombre":"Chilli",
     "imagen":"db_chilli",
-    "descripcion":"---",
+    "descripcion":"Descripción disponible próximamente.",
     "web":"http://www.chillisurfboards.com/"
   },
   {
     "id_marcas":9,
     "nombre":"Catchsurf",
     "imagen":"db_catchsurf",
-    "descripcion":"---",
+    "descripcion":"Descripción disponible próximamente.",
     "web":"http://www.catchsurf.com/"
   },
   {

@@ -37,5 +37,11 @@
 
     <!-- EVENTOS -->
     <string name="eventos_titulo">Eventos:</string>
+    <string name="eventos_detail_titulo">Informacion del evento</string>
+    <string name="eventos_detail_fecha">Fecha:</string>
+    <string name="eventos_lugar">Lugar:</string>
+
+    <!-- MARCAS -->
+    <string name="marcas_titulo">Marcas:</string>
 
 </resources>

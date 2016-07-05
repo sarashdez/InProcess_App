@@ -8,8 +8,9 @@ import es.ulpgc.eite.framework.core.screen.I_ScreenView;
 import es.ulpgc.eite.showyou.android.screen.marcas.master.model.I_MarcasMasterModel;
 import es.ulpgc.eite.showyou.android.screen.marcas.master.view.I_MarcasMasterView;
 import es.ulpgc.eite.showyou.android.screen.marcas.state.MarcasState;
+import es.ulpgc.eite.showyou.android.screen.master.presenter.MasterPresenter;
 
-public abstract class MarcasMasterPresenter extends AndroidScreenPresenter implements I_MarcasMasterPresenter, I_ScreenObserver {
+public abstract class MarcasMasterPresenter extends MasterPresenter implements I_MarcasMasterPresenter, I_ScreenObserver {
 
     private I_MarcasMasterView getMarcasView(){
         return (I_MarcasMasterView) getScreenView();
@@ -26,37 +27,11 @@ public abstract class MarcasMasterPresenter extends AndroidScreenPresenter imple
     }
 
     @Override
-    public void backScreen() {
-        debug("backScreen");
-    }
-
-    @Override
     public void resumeScreen() {
         debug("resumeScreen_MarcasMaster");
 
         getMarcasView().setMarcasCollection(getMarcasModel().getCollection());
         getMarcasView().setListPosition(getMarcasModel().getPosition());
-    }
-
-    @Override
-    public void pauseScreen() {
-        debug("pauseScreen");
-    }
-
-    @Override
-    public void rotateScreen() {
-        debug("rotateScreen");
-    }
-
-    public void changeRotation(int code){
-        debug("changeRotation", "code", code);
-
-        startNextScreenWithFinish(code, true);
-    }
-
-    @Override
-    public void setListPosition(int position) {
-
     }
 
     //ESTADOS

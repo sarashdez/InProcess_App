@@ -5,6 +5,7 @@ import android.app.Application;
 import es.ulpgc.eite.framework.android.AndroidScreenModel;
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.EventosData;
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosDatabase;
+import es.ulpgc.eite.showyou.android.screen.master.model.MasterModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class EventosMasterModel extends AndroidScreenModel implements I_EventosMasterModel {
+public class EventosMasterModel extends MasterModel implements I_EventosMasterModel {
 
     private int position;
 
@@ -60,27 +61,6 @@ public class EventosMasterModel extends AndroidScreenModel implements I_EventosM
         String descripcion = jsonObject.getString("descripcion");
 
         return new EventosData(idEventos, nombre, lugar, fecha, descripcion);
-    }
-
-
-    private String loadJsonFromAsset(String path) {
-
-        Application singleton = (Application) getMediator();
-
-        try {
-            InputStream is = singleton.getAssets().open(path);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            String json = new String(buffer, "UTF-8");
-            debug("loadJsonFromAsset", "json=", json);
-            return json;
-
-        } catch (IOException ex) {
-            return null;
-        }
     }
 
     @Override

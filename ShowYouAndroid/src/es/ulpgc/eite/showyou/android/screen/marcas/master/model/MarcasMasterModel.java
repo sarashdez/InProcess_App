@@ -5,6 +5,7 @@ import android.app.Application;
 import es.ulpgc.eite.framework.android.AndroidScreenModel;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.I_MarcasDatabase;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.MarcasData;
+import es.ulpgc.eite.showyou.android.screen.master.model.MasterModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class MarcasMasterModel extends AndroidScreenModel implements I_MarcasMasterModel {
+public class MarcasMasterModel extends MasterModel implements I_MarcasMasterModel {
 
     private int position;
 
@@ -59,27 +60,6 @@ public class MarcasMasterModel extends AndroidScreenModel implements I_MarcasMas
         String web = jsonObject.getString("web");
 
         return new MarcasData(idMarcas, nombre, imagen, descripcion, web);
-    }
-
-
-    private String loadJsonFromAsset(String path) {
-
-        Application singleton = (Application) getMediator();
-
-        try {
-            InputStream is = singleton.getAssets().open(path);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            String json = new String(buffer, "UTF-8");
-            debug("loadJsonFromAsset", "json=", json);
-            return json;
-
-        } catch (IOException ex) {
-            return null;
-        }
     }
 
     @Override

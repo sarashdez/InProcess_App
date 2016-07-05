@@ -8,8 +8,9 @@ import es.ulpgc.eite.framework.core.screen.I_ScreenView;
 import es.ulpgc.eite.showyou.android.screen.eventos.master.model.I_EventosMasterModel;
 import es.ulpgc.eite.showyou.android.screen.eventos.master.view.I_EventosMasterView;
 import es.ulpgc.eite.showyou.android.screen.eventos.state.EventosState;
+import es.ulpgc.eite.showyou.android.screen.master.presenter.MasterPresenter;
 
-public abstract class EventosMasterPresenter extends AndroidScreenPresenter implements I_EventosMasterPresenter, I_ScreenObserver {
+public abstract class EventosMasterPresenter extends MasterPresenter implements I_EventosMasterPresenter, I_ScreenObserver {
 
     private I_EventosMasterView getEventosView(){
         return (I_EventosMasterView) getScreenView();
@@ -26,37 +27,11 @@ public abstract class EventosMasterPresenter extends AndroidScreenPresenter impl
     }
 
     @Override
-    public void backScreen() {
-        debug("backScreen_Eventos");
-    }
-
-    @Override
     public void resumeScreen() {
         debug("resumeScreen_Eventos");
 
         getEventosView().setEventosCollection(getEventosModel().getCollection());
         getEventosView().setListPosition(getEventosModel().getPosition());
-    }
-
-    @Override
-    public void pauseScreen() {
-        debug("pauseScreen_Eventos");
-    }
-
-    @Override
-    public void rotateScreen() {
-        debug("rotateScreen_Eventos");
-    }
-
-    public void changeRotation(int code){
-        debug("changeRotation", "code", code);
-
-        startNextScreenWithFinish(code, true);
-    }
-
-    @Override
-    public void setListPosition(int position) {
-
     }
 
     //ESTADOS

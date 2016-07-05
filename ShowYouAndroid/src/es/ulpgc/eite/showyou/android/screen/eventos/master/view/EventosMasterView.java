@@ -10,31 +10,16 @@ import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosData;
 import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.I_EventosMasterPresenter;
+import es.ulpgc.eite.showyou.android.screen.master.view.MasterView;
 
 import java.util.List;
 
-public abstract class EventosMasterView extends AndroidScreenView implements I_EventosMasterView {
+public abstract class EventosMasterView extends MasterView implements I_EventosMasterView {
 
-    private ListView _list;
     private EventosAdapter _adapter;
 
     private I_EventosMasterPresenter getEventosPresenter(){
         return (I_EventosMasterPresenter) getScreenPresenter();
-    }
-
-    public abstract int getLayout();
-
-    @Override
-    public void setLayout(){
-        setContentView(getLayout());
-    }
-
-    public ListView getList() {
-        return _list;
-    }
-
-    public void setList(ListView list) {
-        this._list = list;
     }
 
     public EventosAdapter getAdapter() {
@@ -45,28 +30,18 @@ public abstract class EventosMasterView extends AndroidScreenView implements I_E
         this._adapter = adapter;
     }
 
+    @Override
     public int getListView() {
         return R.id.eventos_list;
-    }
-
-    private int getRowLayout(){
-        return R.layout.master_row;
     }
 
     @Override
     public void setEventosScreen(){
         setLayout();
-        setEventosList();
+        setList();
         setEventosAdapter();
-        setEventosListAdapter();
+        setListAdapter();
         setEventosListListener();
-    }
-
-
-    private void setEventosList(){
-        debug("setEventosList");
-
-        setList((ListView) findViewById(getListView()));
     }
 
     private void setEventosAdapter(){
@@ -75,7 +50,7 @@ public abstract class EventosMasterView extends AndroidScreenView implements I_E
         setAdapter(new EventosAdapter(this, getRowLayout()));
     }
 
-    private void setEventosListAdapter(){
+    public void setListAdapter(){
         debug("setMasterListAdapter");
 
         getList().setAdapter(getAdapter());
@@ -104,13 +79,6 @@ public abstract class EventosMasterView extends AndroidScreenView implements I_E
         getAdapter().clear();
         getAdapter().addAll(collection);
         getAdapter().notifyDataSetChanged();
-    }
-
-    @Override
-    public void setListPosition(int position){
-        debug("setListPosition", "position", position);
-
-        getList().setSelection(position);
     }
 
     private class EventosAdapter extends ArrayAdapter<I_EventosData> {

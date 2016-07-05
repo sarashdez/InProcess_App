@@ -5,11 +5,12 @@ import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenObserver;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
+import es.ulpgc.eite.showyou.android.screen.master.presenter.MasterPresenter;
 import es.ulpgc.eite.showyou.android.screen.noticias.master.model.I_NoticiasMasterModel;
 import es.ulpgc.eite.showyou.android.screen.noticias.master.view.I_NoticiasMasterView;
 import es.ulpgc.eite.showyou.android.screen.noticias.state.NoticiasState;
 
-public abstract class NoticiasMasterPresenter extends AndroidScreenPresenter implements I_NoticiasMasterPresenter, I_ScreenObserver {
+public abstract class NoticiasMasterPresenter extends MasterPresenter implements I_NoticiasMasterPresenter, I_ScreenObserver {
 
     private I_NoticiasMasterView getNoticiasView(){
         return (I_NoticiasMasterView) getScreenView();
@@ -26,37 +27,11 @@ public abstract class NoticiasMasterPresenter extends AndroidScreenPresenter imp
     }
 
     @Override
-    public void backScreen() {
-        debug("backScreen");
-    }
-
-    @Override
     public void resumeScreen() {
         debug("resumeScreen_NoticiasMaster");
 
         getNoticiasView().setNoticiasCollection(getNoticiasModel().getCollection());
         getNoticiasView().setListPosition(getNoticiasModel().getPosition());
-    }
-
-    @Override
-    public void pauseScreen() {
-        debug("pauseScreen");
-    }
-
-    @Override
-    public void rotateScreen() {
-        debug("rotateScreen");
-    }
-
-    public void changeRotation(int code){
-        debug("changeRotation", "code", code);
-
-        startNextScreenWithFinish(code, true);
-    }
-
-    @Override
-    public void setListPosition(int position) {
-
     }
 
     //ESTADOS

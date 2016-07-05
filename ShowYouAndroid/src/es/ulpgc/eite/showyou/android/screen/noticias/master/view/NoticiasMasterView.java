@@ -12,32 +12,17 @@ import android.widget.TextView;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.database.noticias_db.I_NoticiasData;
+import es.ulpgc.eite.showyou.android.screen.master.view.MasterView;
 import es.ulpgc.eite.showyou.android.screen.noticias.master.presenter.I_NoticiasMasterPresenter;
 
 import java.util.List;
 
-public abstract class NoticiasMasterView extends AndroidScreenView implements I_NoticiasMasterView {
+public abstract class NoticiasMasterView extends MasterView implements I_NoticiasMasterView {
 
-    private ListView _list;
     private NoticiasAdapter _adapter;
 
     private I_NoticiasMasterPresenter getNoticiasMasterPresenter(){
         return (I_NoticiasMasterPresenter) getScreenPresenter();
-    }
-
-    public abstract int getLayout();
-
-    @Override
-    public void setLayout(){
-        setContentView(getLayout());
-    }
-
-    public ListView getList() {
-        return _list;
-    }
-
-    public void setList(ListView list) {
-        this._list = list;
     }
 
     public NoticiasAdapter getAdapter() {
@@ -48,28 +33,18 @@ public abstract class NoticiasMasterView extends AndroidScreenView implements I_
         this._adapter = adapter;
     }
 
+    @Override
     public int getListView() {
         return R.id.noticias_list;
-    }
-
-    private int getRowLayout(){
-        return R.layout.master_row;
     }
 
     @Override
     public void setNoticiasScreen(){
         setLayout();
-        setNoticiasList();
+        setList();
         setNoticiasAdapter();
-        setNoticiasListAdapter();
+        setListAdapter();
         setNoticiasListListener();
-    }
-
-
-    private void setNoticiasList(){
-        debug("setNoticiasList");
-
-        setList((ListView) findViewById(getListView()));
     }
 
     private void setNoticiasAdapter(){
@@ -78,7 +53,7 @@ public abstract class NoticiasMasterView extends AndroidScreenView implements I_
         setAdapter(new NoticiasAdapter(this, getRowLayout()));
     }
 
-    private void setNoticiasListAdapter(){
+    private void setListAdapter(){
         debug("setMasterListAdapter");
 
         getList().setAdapter(getAdapter());
@@ -99,7 +74,6 @@ public abstract class NoticiasMasterView extends AndroidScreenView implements I_
         });
     }
 
-
     @Override
     public void setNoticiasCollection(List<? extends I_NoticiasData> collection){
         debug("setMasterCollection", "collection", collection);
@@ -107,13 +81,6 @@ public abstract class NoticiasMasterView extends AndroidScreenView implements I_
         getAdapter().clear();
         getAdapter().addAll(collection);
         getAdapter().notifyDataSetChanged();
-    }
-
-    @Override
-    public void setListPosition(int position){
-        debug("setListPosition", "position", position);
-
-        getList().setSelection(position);
     }
 
     private class NoticiasAdapter extends ArrayAdapter<I_NoticiasData> {

@@ -65,6 +65,13 @@
                 android:src="@drawable/llamar_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#ffffff" android:layout_marginLeft="13dp"/>
+
+        <ImageButton
+                android:id="@+id/enviarCorreo_button"
+                android:src="@drawable/enviarcorreo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="#ffffff" android:layout_marginLeft="15dp"/>
     </LinearLayout>
 

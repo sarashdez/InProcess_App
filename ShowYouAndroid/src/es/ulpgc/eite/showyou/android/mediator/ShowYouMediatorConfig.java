@@ -14,6 +14,11 @@ import es.ulpgc.eite.showyou.android.screen.contacto.landscape.LandscapeContacto
 import es.ulpgc.eite.showyou.android.screen.contacto.model.ContactoModel;
 import es.ulpgc.eite.showyou.android.screen.contacto.portrait.PortraitContactoPresenter;
 import es.ulpgc.eite.showyou.android.screen.contacto.portrait.PortraitContactoView;
+import es.ulpgc.eite.showyou.android.screen.correo.landscape.LandCorreoPresenter;
+import es.ulpgc.eite.showyou.android.screen.correo.landscape.LandCorreoView;
+import es.ulpgc.eite.showyou.android.screen.correo.model.CorreoModel;
+import es.ulpgc.eite.showyou.android.screen.correo.portrait.PortraitCorreoPresenter;
+import es.ulpgc.eite.showyou.android.screen.correo.portrait.PortraitCorreoView;
 import es.ulpgc.eite.showyou.android.screen.database.ShowYouDatabase;
 import es.ulpgc.eite.showyou.android.screen.eventos.detail.model.EventosDetailModel;
 import es.ulpgc.eite.showyou.android.screen.eventos.landscape.LandEventosDetailPresenter;
@@ -108,6 +113,10 @@ public class ShowYouMediatorConfig extends MediatorConfig {
         //SCREEN CONTACTO
         getScreens().add(new MediatorScreen(PortraitContactoView.class, PortraitContactoPresenter.class, ContactoModel.class));
         getScreens().add(new MediatorScreen(LandscapeContactoView.class, LandscapeContactoPresenter.class, ContactoModel.class));
+
+        //SCREEN CORREO
+        getScreens().add(new MediatorScreen(PortraitCorreoView.class, PortraitCorreoPresenter.class, CorreoModel.class));
+        getScreens().add(new MediatorScreen(LandCorreoView.class, LandCorreoPresenter.class, CorreoModel.class));
     }
 
     private void setShowYouTransitionCollection() {
@@ -176,5 +185,12 @@ public class ShowYouMediatorConfig extends MediatorConfig {
         //CONTACTO
         getTransitions().add(new MediatorTransition(PortraitContactoView.class, LandscapeContactoView.class, ShowYouMediatorCode.CONTACTO_LANDSCAPE));
         getTransitions().add(new MediatorTransition(LandscapeContactoView.class, PortraitContactoView.class, ShowYouMediatorCode.CONTACTO_PORTRAIT));
+
+        getTransitions().add(new MediatorTransition(PortraitContactoView.class, PortraitCorreoView.class, ShowYouMediatorCode.CORREO_PORTRAIT));
+        getTransitions().add(new MediatorTransition(LandscapeContactoView.class, LandCorreoView.class, ShowYouMediatorCode.CORREO_LANDSCAPE));
+
+        //CORREO
+        getTransitions().add(new MediatorTransition(PortraitCorreoView.class,LandCorreoView.class, ShowYouMediatorCode.CORREO_LANDSCAPE));
+        getTransitions().add(new MediatorTransition(LandCorreoView.class, PortraitCorreoView.class, ShowYouMediatorCode.CORREO_PORTRAIT));
     }
 }

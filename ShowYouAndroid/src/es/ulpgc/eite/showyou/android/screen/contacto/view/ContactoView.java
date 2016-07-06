@@ -7,10 +7,15 @@ import android.view.View;
 import android.widget.ImageButton;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
+import es.ulpgc.eite.showyou.android.screen.contacto.presenter.I_ContactoPresenter;
 
 public abstract class ContactoView extends AndroidScreenView implements I_ContactoView {
 
     public abstract int getLayout();
+
+    private I_ContactoPresenter getContactoPresenter(){
+        return (I_ContactoPresenter) getScreenPresenter();
+    }
 
     @Override
     public void setLayout(){
@@ -23,13 +28,23 @@ public abstract class ContactoView extends AndroidScreenView implements I_Contac
     public void setListener() {
         debug("setListener_Contacto");
 
-        debug("FacebookButtonSetListener");
+        debug("ContactooButtonSetListener");
         ImageButton llamarBtn = (ImageButton) findViewById(R.id.llamarButton);
         llamarBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 llamarButtonClicked();
+            }
+        });
+
+        debug("CorreoButtonSetListener");
+        ImageButton enviarCorreoBtn = (ImageButton) findViewById(R.id.enviarCorreo_button);
+        enviarCorreoBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getContactoPresenter().enviarCorreoButtonClicked();
             }
         });
     }
@@ -56,6 +71,7 @@ public abstract class ContactoView extends AndroidScreenView implements I_Contac
 
         startActivity(intentLlamar);
     }
+
 
 
 

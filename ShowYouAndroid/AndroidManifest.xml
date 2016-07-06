@@ -123,6 +123,17 @@
                 android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
+        <!-- CORREO -->
+        <activity
+                android:name=".screen.correo.portrait.PortraitCorreoView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+                android:name=".screen.correo.landscape.LandCorreoView"
+                android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
     </application>
 
 </manifest>

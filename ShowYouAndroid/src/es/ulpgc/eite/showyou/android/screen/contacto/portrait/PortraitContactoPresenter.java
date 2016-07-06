@@ -13,4 +13,12 @@ public class PortraitContactoPresenter extends ContactoPresenter {
         changeRotation(ShowYouMediatorCode.CONTACTO_LANDSCAPE);
     }
 
+    @Override
+    public void enviarCorreoButtonClicked() {
+        setEnviarCorreoBtnClicked(true);
+        debug("EnviarCorreoButtonClicked", "clicked", getEnviarCorreoBtnClicked());
+
+        startNextScreenWithObserver(this, ShowYouMediatorCode.CORREO_PORTRAIT);
+    }
+
 }

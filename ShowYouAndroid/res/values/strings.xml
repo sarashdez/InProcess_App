@@ -22,13 +22,15 @@
         En In-Process basamos nuestro trabajo en la cercanía y dedicación hacia nuestros clientes, somos una empresa pequeña pero con un gran corazón, profesionales, diferentes y pasionales en cada uno de nuestros proyectos y encargos."
     </string>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO y CORREO-->
     <string name="contacto_titulo">Contacto:</string>
     <string name="nombre_contacto">Lorenzo Suárez Dorta</string>
     <string name="puesto_contacto">Ventas y Marketing de In-Process</string>
     <string name="correo_contacto">info@inprocess.es</string>
     <string name="telefono_contacto">+34 690 951 675</string>
     <string name="llamar_button_txt">Llamar</string>
+    <string name="mensaje_correo_txt">Intruduzca aqui el mensaje que desea enviar</string>
+    <string name="correo_button">Envie un correo</string>
 
     <!-- MEDIA -->
     <string name="intro_media">Puedes encontrarnos en las siguientes redes sociales: </string>

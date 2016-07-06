@@ -1,9 +1,6 @@
 package es.ulpgc.eite.showyou.android.screen.contacto.presenter;
 
 
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
@@ -18,7 +15,7 @@ public class ContactoPresenter extends AndroidScreenPresenter implements I_Conta
 
     @Override
     public void createScreen() {
-        debug("createScreen");
+        debug("createScreen_Contacto");
 
         getContactoView().setLayout();
         getContactoView().setListener();
@@ -27,26 +24,26 @@ public class ContactoPresenter extends AndroidScreenPresenter implements I_Conta
 
     @Override
     public void backScreen() {
-        debug("backScreen");
+        debug("backScreen_Contacto");
     }
 
     @Override
     public void resumeScreen() {
-        debug("resumeScreen");
+        debug("resumeScreen_Contacto");
     }
 
     @Override
     public void pauseScreen() {
-        debug("pauseScreen");
+        debug("pauseScreen_Contacto");
     }
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_Contacto");
     }
 
     public void changeRotation(int code){
-        debug("changeRotation", "code", code);
+        debug("changeRotation_Contacto", "code", code);
 
         startNextScreenWithFinish(code, true);
     }
@@ -54,16 +51,19 @@ public class ContactoPresenter extends AndroidScreenPresenter implements I_Conta
     //Estados
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
+        debug("setScreenState_Contacto");
 
     }
 
     @Override
     public I_ScreenState getScreenState() {
+        debug("getScreenState_Contacto");
         return null;
     }
 
     @Override
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
+        debug("getNextState_Contacto");
         return null;
     }
 

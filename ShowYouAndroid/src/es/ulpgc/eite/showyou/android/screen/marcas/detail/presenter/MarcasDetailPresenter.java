@@ -8,7 +8,6 @@ import es.ulpgc.eite.showyou.android.screen.marcas.detail.model.I_MarcasDetailMo
 import es.ulpgc.eite.showyou.android.screen.marcas.detail.view.I_MarcasDetailView;
 import es.ulpgc.eite.showyou.android.screen.marcas.state.MarcasState;
 
-
 public class MarcasDetailPresenter extends AndroidScreenPresenter implements I_MarcasDetailPresenter {
 
     private I_MarcasDetailView getMarcasDetailView(){
@@ -56,22 +55,21 @@ public class MarcasDetailPresenter extends AndroidScreenPresenter implements I_M
     //ESTADOS
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
-        debug("setScreenState", "code", code);
+        debug("setScreenState_MarcasDetail", "code", code);
 
         MarcasState _state = (MarcasState) state;
-        debug("getNextState", "data_nombre", _state.getData().getNombre());
         getMarcasDetailModel().setData( _state.getData());
     }
 
     @Override
     public I_ScreenState getScreenState() {
-        debug("getScreenState");
+        debug("getScreenState_MarcasDetail");
         return null;
     }
 
     @Override
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
-        debug("getNextState", "code", code);
+        debug("getNextState_MarcasDetail", "code", code);
         return null;
     }
 

@@ -13,7 +13,7 @@ public class PortraitEventosMasterPresenter extends EventosMasterPresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_EventosMaster");
 
         changeRotation(ShowYouMediatorCode.EVENTOS_LANDSCAPE);
     }
@@ -23,8 +23,8 @@ public class PortraitEventosMasterPresenter extends EventosMasterPresenter {
 
         getEventosModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getEventosModel().getData());
+        debug("setListPosition_EventosMaster", "position", position);
+        debug("setListPosition_EventosMaster", "data", getEventosModel().getData());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_SELECT_PORTRAIT);
     }

@@ -23,8 +23,8 @@ public class LandEventosMasterPresenter extends EventosMasterPresenter {
 
         getEventosModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getEventosModel().getData());
+        debug("setListPosition_LandEventosDetail", "position", position);
+        debug("setListPosition_LandEventosDetail", "data", getEventosModel().getData());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.EVENTOS_SELECT_LANDSCAPE);
     }

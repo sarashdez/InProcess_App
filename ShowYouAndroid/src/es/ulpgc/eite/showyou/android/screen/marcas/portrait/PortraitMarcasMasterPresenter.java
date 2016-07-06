@@ -13,7 +13,7 @@ public class PortraitMarcasMasterPresenter extends MarcasMasterPresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_MarcasMaster");
 
         changeRotation(ShowYouMediatorCode.MARCAS_MASTER_LANDSCAPE);
     }
@@ -23,8 +23,7 @@ public class PortraitMarcasMasterPresenter extends MarcasMasterPresenter {
 
         getMarcasMasterModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getMarcasMasterModel().getData());
+        debug("setListPosition_MarcasModel", "position", position);
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_SELECT_PORTRAIT);
     }

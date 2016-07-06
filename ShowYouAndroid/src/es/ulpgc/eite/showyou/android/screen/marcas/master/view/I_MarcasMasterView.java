@@ -2,8 +2,6 @@ package es.ulpgc.eite.showyou.android.screen.marcas.master.view;
 
 
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.I_MarcasData;
-import es.ulpgc.eite.showyou.android.screen.database.marcas_db.MarcasData;
-
 import java.util.List;
 
 public interface I_MarcasMasterView {

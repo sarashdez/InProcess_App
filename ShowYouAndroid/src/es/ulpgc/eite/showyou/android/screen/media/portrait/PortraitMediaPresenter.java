@@ -8,7 +8,7 @@ public class PortraitMediaPresenter extends MediaPresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_Media");
 
         changeRotation(ShowYouMediatorCode.MEDIA_LANDSCAPE);
     }

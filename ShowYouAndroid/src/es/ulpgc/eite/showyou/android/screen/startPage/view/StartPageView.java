@@ -2,7 +2,6 @@ package es.ulpgc.eite.showyou.android.screen.startPage.view;
 
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
@@ -18,14 +17,14 @@ public abstract class StartPageView extends AndroidScreenView implements I_Start
 
     @Override
     public void setLayout(){
-        debug("setLayout");
+        debug("setLayout_Startpage");
 
         setContentView(getLayout());
     }
 
     @Override
     public void setListener() {
-        debug("setListener");
+        debug("setListener_Startpage");
 
         debug("MarcasButtonSetListener");
         ImageButton marcasBtn = (ImageButton) findViewById(R.id.marcas_button);

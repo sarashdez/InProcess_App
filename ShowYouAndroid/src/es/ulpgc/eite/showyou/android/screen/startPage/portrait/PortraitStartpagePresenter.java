@@ -8,7 +8,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_Startpage");
 
         changeRotation(ShowYouMediatorCode.STARTPAGE_LANDSCAPE);
     }
@@ -16,7 +16,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void bioButtonClicked() {
         setBioBtnClicked(true);
-        debug("buttonClicked", "clicked", getBioBtnClicked());
+        debug("bioButtonClicked", "clicked", getBioBtnClicked());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.BIO_PORTRAIT);
     }
@@ -24,7 +24,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void marcasButtonClicked() {
         setMarcasBtnClicked(true);
-        debug("buttonClicked", "clicked", getMarcasBtnClicked());
+        debug("marcasButtonClicked", "clicked", getMarcasBtnClicked());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_MASTER_PORTRAIT);
     }
@@ -32,7 +32,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void eventosButtonClicked() {
         setEventosBtnClicked(true);
-        debug("buttonClicked", "clicked", getEventosBtnClicked());
+        debug("eventosButtonClicked", "clicked", getEventosBtnClicked());
 
         startNextScreenWithFinish( ShowYouMediatorCode.EVENTOS_PORTRAIT, false);
     }
@@ -40,7 +40,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void mediaButtonClicked() {
         setMediaBtnClicked(true);
-        debug("buttonClicked", "clicked", getMediaBtnClicked());
+        debug("mediaButtonClicked", "clicked", getMediaBtnClicked());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.MEDIA_PORTRAIT);
     }
@@ -48,7 +48,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void noticiasButtonClicked() {
         setNoticiasBtnClicked(true);
-        debug("buttonClicked", "clicked", getNoticiasBtnClicked());
+        debug("noticiasButtonClicked", "clicked", getNoticiasBtnClicked());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_MASTER_PORTRAIT);
     }
@@ -56,7 +56,7 @@ public class PortraitStartpagePresenter extends StartPagePresenter {
     @Override
     public void contactoButtonClicked() {
         setContactoBtnClicked(true);
-        debug("buttonClicked", "clicked", getContactoBtnClicked());
+        debug("contactoButtonClicked", "clicked", getContactoBtnClicked());
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.CONTACTO_PORTRAIT);
     }

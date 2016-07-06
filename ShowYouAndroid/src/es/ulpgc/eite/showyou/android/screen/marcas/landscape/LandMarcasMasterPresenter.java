@@ -13,18 +13,16 @@ public class LandMarcasMasterPresenter extends MarcasMasterPresenter  {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_MarcasDetail");
 
         changeRotation(ShowYouMediatorCode.MARCAS_MASTER_PORTRAIT);
     }
 
     @Override
     public void setListPosition(int position) {
-
         getMarcasMasterModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getMarcasMasterModel().getData());
+        debug("setListPosition_MarcasDetail", "position", position);
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.MARCAS_SELECT_LANDSCAPE);
     }

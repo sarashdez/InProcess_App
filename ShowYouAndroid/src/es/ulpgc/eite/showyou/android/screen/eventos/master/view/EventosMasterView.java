@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosData;
 import es.ulpgc.eite.showyou.android.screen.eventos.master.presenter.I_EventosMasterPresenter;
@@ -45,13 +44,13 @@ public abstract class EventosMasterView extends MasterView implements I_EventosM
     }
 
     private void setEventosAdapter(){
-        debug("setMasterAdapter");
+        debug("setMasterAdapter_EventosMaster");
 
         setAdapter(new EventosAdapter(this, getRowLayout()));
     }
 
     public void setListAdapter(){
-        debug("setMasterListAdapter");
+        debug("setMasterListAdapter_EventosMaster");
 
         getList().setAdapter(getAdapter());
     }
@@ -74,7 +73,7 @@ public abstract class EventosMasterView extends MasterView implements I_EventosM
 
     @Override
     public void setEventosCollection(List<? extends I_EventosData> collection){
-        debug("setMasterCollection", "collection", collection);
+        debug("setMasterCollection_EventosMaster", "collection", collection);
 
         getAdapter().clear();
         getAdapter().addAll(collection);

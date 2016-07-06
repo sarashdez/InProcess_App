@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
-import es.ulpgc.eite.showyou.android.screen.media.presenter.I_MediaPresenter;
 
 
 public abstract class MediaView extends AndroidScreenView implements I_MediaView {
@@ -17,14 +16,14 @@ public abstract class MediaView extends AndroidScreenView implements I_MediaView
 
     @Override
     public void setLayout(){
-        debug("setLayout");
+        debug("setLayout_Media");
 
         setContentView(getLayout());
     }
 
     @Override
     public void setListener() {
-        debug("setListener");
+        debug("setListener_Media");
 
         debug("FacebookButtonSetListener");
         ImageButton facebookBtn = (ImageButton) findViewById(R.id.facebookButton);

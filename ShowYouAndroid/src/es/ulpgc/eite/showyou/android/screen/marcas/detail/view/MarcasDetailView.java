@@ -2,7 +2,6 @@ package es.ulpgc.eite.showyou.android.screen.marcas.detail.view;
 
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageButton;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.MarcasData;
-import es.ulpgc.eite.showyou.android.screen.marcas.detail.view.I_MarcasDetailView;
 
 public abstract class MarcasDetailView extends AndroidScreenView implements I_MarcasDetailView {
 

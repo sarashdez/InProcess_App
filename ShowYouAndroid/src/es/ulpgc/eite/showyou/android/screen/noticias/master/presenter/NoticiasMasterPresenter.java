@@ -1,7 +1,6 @@
 package es.ulpgc.eite.showyou.android.screen.noticias.master.presenter;
 
 
-import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenObserver;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
@@ -21,7 +20,7 @@ public abstract class NoticiasMasterPresenter extends MasterPresenter implements
 
     @Override
     public void createScreen() {
-        debug("createScreen");
+        debug("createScreen_NoticiasMaster");
 
         getNoticiasView().setNoticiasScreen();
     }
@@ -37,7 +36,7 @@ public abstract class NoticiasMasterPresenter extends MasterPresenter implements
     //ESTADOS
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
-        debug("setScreenState", "code", code);
+        debug("setScreenState_NoticiasMaster", "code", code);
         if(state != null) {
             NoticiasState _state = (NoticiasState) state;
             getNoticiasModel().setPosition(_state.getPosition());
@@ -46,17 +45,16 @@ public abstract class NoticiasMasterPresenter extends MasterPresenter implements
 
     @Override
     public I_ScreenState getScreenState() {
-        debug("getScreenState");
+        debug("getScreenState_NoticiasMaster");
         NoticiasState state = new NoticiasState(getNoticiasModel().getPosition());
         return state;
     }
 
     @Override
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
-        debug("getNextState", "code", code);
+        debug("getNextState_NoticiasMaster", "code", code);
 
         NoticiasState state = new NoticiasState(getNoticiasModel().getData());
-        debug("getNextState", "data_nombre", state.getData().getNombre());
         return state;
     }
 

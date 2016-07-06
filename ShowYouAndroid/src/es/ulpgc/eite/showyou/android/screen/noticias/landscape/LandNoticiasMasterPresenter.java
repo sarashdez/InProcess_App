@@ -12,7 +12,7 @@ public class LandNoticiasMasterPresenter extends NoticiasMasterPresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_NoticiasDetail");
 
         changeRotation(ShowYouMediatorCode.NOTICIAS_MASTER_PORTRAIT);
     }
@@ -22,8 +22,7 @@ public class LandNoticiasMasterPresenter extends NoticiasMasterPresenter {
 
         getNoticiasModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getNoticiasModel().getData());
+        debug("setListPosition_NoticiasDetail", "position", position);
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_SELECT_LANDSCAPE);
     }

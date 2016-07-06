@@ -1,17 +1,13 @@
 package es.ulpgc.eite.showyou.android.screen.eventos.master.model;
 
 
-import android.app.Application;
-import es.ulpgc.eite.framework.android.AndroidScreenModel;
+
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.EventosData;
 import es.ulpgc.eite.showyou.android.screen.database.eventos_db.I_EventosDatabase;
 import es.ulpgc.eite.showyou.android.screen.master.model.MasterModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class EventosMasterModel extends MasterModel implements I_EventosMasterModel {
@@ -31,7 +27,7 @@ public class EventosMasterModel extends MasterModel implements I_EventosMasterMo
     }
 
    private void fillDatabase() {
-        debug("fillDatabase Eventos");
+        debug("fillDatabase EventosMaster");
 
         if(getDatabase().getEventosDataList().size()==0){
             mapperJsonToJava(loadJsonFromAsset("eventosDB.json"));

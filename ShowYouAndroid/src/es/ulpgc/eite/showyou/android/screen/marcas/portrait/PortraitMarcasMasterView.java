@@ -8,7 +8,7 @@ public class PortraitMarcasMasterView extends MarcasMasterView {
 
     @Override
     public int getLayout() {
-        debug("getLayout");
+        debug("getLayout_MarcasMaster");
 
         return R.layout.marcas_master_view;
     }

@@ -1,17 +1,12 @@
 package es.ulpgc.eite.showyou.android.screen.noticias.master.model;
 
 
-import android.app.Application;
-import es.ulpgc.eite.framework.android.AndroidScreenModel;
 import es.ulpgc.eite.showyou.android.screen.database.noticias_db.I_NoticiasDatabase;
 import es.ulpgc.eite.showyou.android.screen.database.noticias_db.NoticiasData;
 import es.ulpgc.eite.showyou.android.screen.master.model.MasterModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class NoticiasMasterModel extends MasterModel implements I_NoticiasMasterModel {
@@ -31,7 +26,7 @@ public class NoticiasMasterModel extends MasterModel implements I_NoticiasMaster
     }
 
     private void fillDatabase() {
-        debug("fillDatabase Noticias");
+        debug("fillDatabase NoticiasMaster");
 
         if(getDatabase().getNoticiasDataList().size()==0){
             mapperJsonToJava(loadJsonFromAsset("noticiasDB.json"));

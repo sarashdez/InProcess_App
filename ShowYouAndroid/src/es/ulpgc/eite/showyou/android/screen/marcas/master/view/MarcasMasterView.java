@@ -7,12 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
-import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.I_MarcasData;
-import es.ulpgc.eite.showyou.android.screen.database.marcas_db.MarcasData;
 import es.ulpgc.eite.showyou.android.screen.marcas.master.presenter.I_MarcasMasterPresenter;
 import es.ulpgc.eite.showyou.android.screen.master.view.MasterView;
 
@@ -49,13 +46,13 @@ public abstract class MarcasMasterView extends MasterView implements I_MarcasMas
     }
 
     private void setMarcasAdapter(){
-        debug("setMasterAdapter");
+        debug("setMasterAdapter_MarcasMaster");
 
         setAdapter(new MarcasAdapter(this, getRowLayout()));
     }
 
     private void setListAdapter(){
-        debug("setMasterListAdapter");
+        debug("setMasterListAdapter_MarcasMaster");
 
         getList().setAdapter(getAdapter());
     }
@@ -77,7 +74,7 @@ public abstract class MarcasMasterView extends MasterView implements I_MarcasMas
 
     @Override
     public void setMarcasCollection(List<? extends I_MarcasData> collection){
-        debug("setMasterCollection", "collection", collection);
+        debug("setMasterCollection_MarcasMaster", "collection", collection);
 
         getAdapter().clear();
         getAdapter().addAll(collection);

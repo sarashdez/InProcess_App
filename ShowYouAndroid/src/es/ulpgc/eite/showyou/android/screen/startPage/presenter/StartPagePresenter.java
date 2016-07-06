@@ -5,7 +5,6 @@ import es.ulpgc.eite.framework.android.AndroidScreenPresenter;
 import es.ulpgc.eite.framework.core.screen.I_ScreenObserver;
 import es.ulpgc.eite.framework.core.screen.I_ScreenState;
 import es.ulpgc.eite.framework.core.screen.I_ScreenView;
-import es.ulpgc.eite.showyou.android.mediator.ShowYouMediatorCode;
 import es.ulpgc.eite.showyou.android.screen.startPage.view.I_StartPageView;
 
 public class StartPagePresenter extends AndroidScreenPresenter implements I_StartPagePresenter, I_ScreenObserver {
@@ -16,7 +15,7 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     @Override
     public void createScreen() {
-        debug("createScreen");
+        debug("createScreen_Startpage");
 
         getStartPageView().setLayout();
         getStartPageView().setListener();
@@ -24,7 +23,7 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     @Override
     public void backScreen() {
-        debug("backScreen");
+        debug("backScreen_Startpage");
     }
 
     @Override
@@ -34,16 +33,16 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
 
     @Override
     public void pauseScreen() {
-        debug("pauseScreen");
+        debug("pauseScreen_Startpage");
     }
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_Startpage");
     }
 
     public void changeRotation(int code){
-        debug("changeRotation", "code", code);
+        debug("changeRotation_Startpage", "code", code);
 
         startNextScreenWithFinish(code, true);
     }
@@ -52,21 +51,24 @@ public class StartPagePresenter extends AndroidScreenPresenter implements I_Star
     //ESTADOS
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
-
+        debug("setScreenState_Startpage");
     }
 
     @Override
     public I_ScreenState getScreenState() {
+        debug("getScreenState_Startpage");
         return null;
     }
 
     @Override
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
+        debug("getNextState_Startpage");
         return null;
     }
 
     @Override
     public I_ScreenState updateObserverState(Class<? extends I_ScreenView> view, int code, I_ScreenState i_screenState) {
+        debug("updateObserverState_Startpage");
         return null;
     }
 

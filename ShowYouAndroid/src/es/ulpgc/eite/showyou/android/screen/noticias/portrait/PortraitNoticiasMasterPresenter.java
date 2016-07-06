@@ -13,7 +13,7 @@ public class PortraitNoticiasMasterPresenter extends NoticiasMasterPresenter {
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_NoticiasMaster");
 
         changeRotation(ShowYouMediatorCode.NOTICIAS_MASTER_LANDSCAPE);
     }
@@ -23,8 +23,7 @@ public class PortraitNoticiasMasterPresenter extends NoticiasMasterPresenter {
 
         getNoticiasMasterModel().setPosition(position);
 
-        debug("setListPosition", "position", position);
-        debug("setListPosition", "data", getNoticiasMasterModel().getData());
+        debug("setListPosition_NoticiasMaster", "position", position);
 
         startNextScreenWithObserver(this, ShowYouMediatorCode.NOTICIAS_SELECT_PORTRAIT);
     }

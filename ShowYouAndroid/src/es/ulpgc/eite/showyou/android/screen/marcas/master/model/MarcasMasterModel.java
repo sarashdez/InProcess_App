@@ -1,16 +1,12 @@
 package es.ulpgc.eite.showyou.android.screen.marcas.master.model;
 
 
-import android.app.Application;
-import es.ulpgc.eite.framework.android.AndroidScreenModel;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.I_MarcasDatabase;
 import es.ulpgc.eite.showyou.android.screen.database.marcas_db.MarcasData;
 import es.ulpgc.eite.showyou.android.screen.master.model.MasterModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class MarcasMasterModel extends MasterModel implements I_MarcasMasterModel {
@@ -30,7 +26,7 @@ public class MarcasMasterModel extends MasterModel implements I_MarcasMasterMode
     }
 
     private void fillDatabase() {
-        debug("fillDatabase Marcas");
+        debug("fillDatabase MarcasMaster");
 
         if(getDatabase().getMarcasDataList().size()==0){
             mapperJsonToJava(loadJsonFromAsset("marcasDB.json"));

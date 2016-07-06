@@ -4,12 +4,9 @@ package es.ulpgc.eite.showyou.android.screen.contacto.view;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import es.ulpgc.eite.framework.android.AndroidScreenView;
 import es.ulpgc.eite.showyou.android.R;
-import es.ulpgc.eite.showyou.android.screen.contacto.presenter.I_ContactoPresenter;
 
 public abstract class ContactoView extends AndroidScreenView implements I_ContactoView {
 
@@ -17,14 +14,14 @@ public abstract class ContactoView extends AndroidScreenView implements I_Contac
 
     @Override
     public void setLayout(){
-        debug("setLayout");
+        debug("setLayout_Contacto");
 
         setContentView(getLayout());
     }
 
     @Override
     public void setListener() {
-        debug("setListener");
+        debug("setListener_Contacto");
 
         debug("FacebookButtonSetListener");
         ImageButton llamarBtn = (ImageButton) findViewById(R.id.llamarButton);
@@ -37,6 +34,7 @@ public abstract class ContactoView extends AndroidScreenView implements I_Contac
         });
     }
 
+    //Llamar Button
     private Boolean _llamarBtnClicked;
     public Boolean getLlamarBtnClicked() {
         return _llamarBtnClicked;

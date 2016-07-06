@@ -14,49 +14,52 @@ public class BioPresenter extends AndroidScreenPresenter implements I_BioPresent
 
     @Override
     public void createScreen() {
-        debug("createScreen");
+        debug("createScreen_Bio");
 
         getBioView().setLayout();
     }
 
     @Override
     public void backScreen() {
-        debug("backScreen");
+        debug("backScreen_Bio");
     }
 
     @Override
     public void resumeScreen() {
-        debug("resumeScreen");
+        debug("resumeScreen_Bio");
     }
 
     @Override
     public void pauseScreen() {
-        debug("pauseScreen");
+        debug("pauseScreen_Bio");
     }
 
     @Override
     public void rotateScreen() {
-        debug("rotateScreen");
+        debug("rotateScreen_Bio");
     }
 
     public void changeRotation(int code){
-        debug("changeRotation", "code", code);
+        debug("changeRotation_Bio", "code", code);
 
         startNextScreenWithFinish(code, true);
     }
 
     @Override
     public void setScreenState(Class<? extends I_ScreenView> view, int code, I_ScreenState state) {
+        debug("setScreenState_Bio");
 
     }
 
     @Override
     public I_ScreenState getScreenState() {
+        debug("getScreenState_Bio");
         return null;
     }
 
     @Override
     public I_ScreenState getNextState(Class<? extends I_ScreenView> view, int code) {
+        debug("getNextState_Bio");
         return null;
     }
 }

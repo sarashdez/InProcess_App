@@ -15,6 +15,7 @@
                 android:name=".screen.startPage.portrait.PortraitStartpageView"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +23,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-                android:name=".screen.startPage.landscape.LandscapeStartpageView"
-                android:configChanges="orientation|keyboardHidden|screenSize">
-        </activity>
 
         <!-- BIO -->
         <activity

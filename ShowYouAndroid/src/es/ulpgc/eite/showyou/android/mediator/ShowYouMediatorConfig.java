@@ -191,6 +191,6 @@ public class ShowYouMediatorConfig extends MediatorConfig {
 
         //CORREO
         getTransitions().add(new MediatorTransition(PortraitCorreoView.class,LandCorreoView.class, ShowYouMediatorCode.CORREO_LANDSCAPE));
-        getTransitions().add(new MediatorTransition(LandCorreoView.class, PortraitCorreoView.class, ShowYouMediatorCode.CORREO_PORTRAIT));
+        getTransitions().add(new MediatorTransition(LandCorreoView.class, LandCorreoView.class, ShowYouMediatorCode.CORREO_PORTRAIT));
     }
 }
